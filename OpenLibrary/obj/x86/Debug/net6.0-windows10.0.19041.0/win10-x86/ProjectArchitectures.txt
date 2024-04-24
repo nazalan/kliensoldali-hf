@@ -1,0 +1,1 @@
+C:\work\Kiltech\hf\OpenLibrary\OpenLibrary\OpenLibrary.csproj;x86

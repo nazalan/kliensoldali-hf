@@ -1,2 +1,2 @@
 # Kliensoldali Techológiák házifeladat
-könyvkereső alkalmazás Open Library API-val
+Könyvkereső alkalmazás Open Library API-val, WinUI technológiával

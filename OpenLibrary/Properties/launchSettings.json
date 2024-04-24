@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "OpenLibrary (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "OpenLibrary (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
