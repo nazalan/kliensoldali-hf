@@ -1,0 +1,1 @@
+C:\work\Kiltech\hf\kliensoldali-hf\OpenLibrary\OpenLibrary.csproj;x64

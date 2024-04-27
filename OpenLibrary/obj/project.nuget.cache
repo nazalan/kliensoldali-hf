@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lnriXXaiifNL1pdoArzrbUbctyFBbpi0I+XaNveSqNB1lyKT3xauFRx2qIlYhZQ2FIalkEBtYWpwhnsQyUlRhg==",
+  "dgSpecHash": "9GbW/cE33U4wfjiZg9yfy58baczFFxXqNBs3zDnNv/CKamivhUyVc//B5isv74LBpV3MGjzbizTx99aVbpKgOA==",
   "success": true,
-  "projectFilePath": "C:\\work\\Kiltech\\hf\\OpenLibrary\\OpenLibrary\\OpenLibrary.csproj",
+  "projectFilePath": "C:\\work\\Kiltech\\hf\\kliensoldali-hf\\OpenLibrary\\OpenLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.aspnet.webapi.client\\6.0.0\\microsoft.aspnet.webapi.client.6.0.0.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.755\\microsoft.windows.sdk.buildtools.10.0.22621.755.nupkg.sha512",

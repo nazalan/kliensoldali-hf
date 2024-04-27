@@ -101,6 +101,7 @@ namespace OpenLibrary
 		public string Key { get; set; }
 		public string Title { get; set; }
 		public List<string> AuthorNames { get; set; }
+		public string AuthorNamesAsString => string.Join(", ", AuthorNames);
 		public int? FirstPublishYear { get; set; }
 		public List<string> Subject { get; set; }
 		public List<Edition> Editions { get; set; }
