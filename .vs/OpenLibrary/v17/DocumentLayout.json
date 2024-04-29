@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\work\\Kiltech\\hf\\kliensoldali-hf\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|c:\\work\\kiltech\\hf\\kliensoldali-hf\\openlibrary\\bookdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|solutionrelative:openlibrary\\bookdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|c:\\work\\kiltech\\hf\\kliensoldali-hf\\openlibrary\\home.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|solutionrelative:openlibrary\\home.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|c:\\work\\kiltech\\hf\\kliensoldali-hf\\openlibrary\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|solutionrelative:openlibrary\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|c:\\work\\kiltech\\hf\\kliensoldali-hf\\openlibrary\\bookdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|solutionrelative:openlibrary\\bookdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|c:\\work\\kiltech\\hf\\kliensoldali-hf\\openlibrary\\bookdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -46,7 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "BookDetailPage.xaml.cs",
               "DocumentMoniker": "C:\\work\\Kiltech\\hf\\kliensoldali-hf\\OpenLibrary\\BookDetailPage.xaml.cs",
               "RelativeDocumentMoniker": "OpenLibrary\\BookDetailPage.xaml.cs",
@@ -67,8 +67,7 @@
               "RelativeToolTip": "OpenLibrary\\BookDetailPage.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-27T11:27:31.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-27T11:27:31.483Z"
             }
           ]
         },
@@ -78,20 +77,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Home.xaml.cs",
               "DocumentMoniker": "C:\\work\\Kiltech\\hf\\kliensoldali-hf\\OpenLibrary\\Home.xaml.cs",
               "RelativeDocumentMoniker": "OpenLibrary\\Home.xaml.cs",
               "ToolTip": "C:\\work\\Kiltech\\hf\\kliensoldali-hf\\OpenLibrary\\Home.xaml.cs",
               "RelativeToolTip": "OpenLibrary\\Home.xaml.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAADgv1MAAAASAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAArwFMAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-27T10:42:07.766Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Home.xaml",
               "DocumentMoniker": "C:\\work\\Kiltech\\hf\\kliensoldali-hf\\OpenLibrary\\Home.xaml",
               "RelativeDocumentMoniker": "OpenLibrary\\Home.xaml",
@@ -99,8 +98,7 @@
               "RelativeToolTip": "OpenLibrary\\Home.xaml",
               "ViewState": "AQIAAAEAAAAAAAAAAAAIwCAAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-27T10:33:04.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-27T10:33:04.529Z"
             }
           ]
         }
