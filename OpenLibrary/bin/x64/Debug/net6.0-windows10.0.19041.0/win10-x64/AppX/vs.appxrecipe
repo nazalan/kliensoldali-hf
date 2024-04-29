@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\work\Kiltech\hf\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-04-27T10:48:24.388</Modified>
+      <Modified>2024-04-29T17:19:02.290</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\work\Kiltech\hf\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-04-27T10:48:23.901</Modified>
+      <Modified>2024-04-29T17:17:45.076</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\work\Kiltech\hf\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\OpenLibrary.runtimeconfig.json">
       <PackagePath>OpenLibrary.runtimeconfig.json</PackagePath>
@@ -43,15 +43,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\work\Kiltech\hf\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\OpenLibrary.dll">
       <PackagePath>OpenLibrary.dll</PackagePath>
-      <Modified>2024-04-27T10:48:23.630</Modified>
+      <Modified>2024-04-29T17:19:01.840</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\work\Kiltech\hf\kliensoldali-hf\OpenLibrary\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>OpenLibrary.exe</PackagePath>
-      <Modified>2024-04-27T10:48:23.640</Modified>
+      <Modified>2024-04-29T17:19:01.848</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\work\Kiltech\hf\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\OpenLibrary.deps.json">
       <PackagePath>OpenLibrary.deps.json</PackagePath>
-      <Modified>2024-04-27T10:33:25.545</Modified>
+      <Modified>2024-04-29T15:16:14.688</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ThinkPad\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.27\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

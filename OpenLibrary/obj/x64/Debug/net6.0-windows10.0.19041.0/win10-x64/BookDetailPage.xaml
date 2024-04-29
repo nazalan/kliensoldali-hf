@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Page
     x:Class="OpenLibrary.BookDetailPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -12,7 +12,7 @@
 
     <Grid>
         <TextBlock Text="Vegre itt" FontSize="20" />
-        <ListView x:Name="BookListView" Margin="0,40,0,0">
+        <ListView x:ConnectionId='2' x:Name="BookListView" Margin="0,40,0,0">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -35,3 +35,4 @@
 
 
 </Page>
+

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Page
     x:Class="OpenLibrary.Home"
 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -15,11 +15,11 @@ mc:Ignorable="d">
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
-            <TextBox x:Name="searchTextBox" Width="300" PlaceholderText="Search by keyword" Margin="5"/>
-            <Button Content="Search" Click="SearchButton_Click" Margin="5"/>
+            <TextBox x:ConnectionId='5' x:Name="searchTextBox" Width="300" PlaceholderText="Search by keyword" Margin="5"/>
+            <Button x:ConnectionId='6' Content="Search"                            Margin="5"/>
             <!--<Button  x:Name="button" Click="HyperlinkButton_Click" Content="Details"/>-->
         </StackPanel>
-        <ListView x:Name="resultsListView" Grid.Row="1">
+        <ListView x:ConnectionId='2' x:Name="resultsListView" Grid.Row="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
@@ -30,7 +30,7 @@ mc:Ignorable="d">
                             </Grid.ColumnDefinitions>
                             <Image Width="100" Height="150" Source="{Binding CoverImageUrl}" Grid.Column="0"/>
                             <StackPanel Margin="10" Grid.Column="1">
-                                <TextBlock Text="{Binding Title}" FontSize="20"/>
+                                <TextBlock Text="{Binding Key}" FontSize="20"/>
                                 <TextBlock FontSize="16">
                                      <Run Text="by"/>
                                      <Run Text="{Binding AuthorNamesAsString}"/>
@@ -40,7 +40,7 @@ mc:Ignorable="d">
                                      <Run Text="{Binding FirstPublishYear}"/>
                                 </TextBlock>
 
-                                <Button  x:Name="button" Click="HyperlinkButton_Click" Content="Details" Tag="{Binding Key}"/>
+                                <Button x:ConnectionId='4'  x:Name="button"                               Content="Details" Tag="{Binding Key}"/>
                                 
                             </StackPanel>
                         </Grid>
@@ -52,3 +52,4 @@ mc:Ignorable="d">
 
     </Grid>
 </Page>
+

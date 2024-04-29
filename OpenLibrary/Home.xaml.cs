@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Net.Http;
+//using System.Windows.Navigation;
+using Windows.Devices.Enumeration;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -15,6 +17,7 @@ namespace OpenLibrary
 	/// </summary>
 	public sealed partial class Home : Page
 	{
+
 		public Home()
 		{
 			this.InitializeComponent();
@@ -28,11 +31,20 @@ namespace OpenLibrary
 			resultsListView.ItemsSource = searchResults;
 		}
 
+		private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+		{
+			Button button = (Button)sender;
+			string key = button.Tag.ToString();
+
+			BookDetailPage mynewPage = new BookDetailPage(key);
+			this.Content = mynewPage;
+		}
+
+
 		private async Task<List<Book>> SearchBooksAsync(string searchQuery)
 		{
 			List<Book> results = new List<Book>();
 
-			// Az OpenLibrary API végpontja
 			//string apiUrl = $"https://openlibrary.org/search.json?q={searchQuery}";
 			string apiUrl = $"https://openlibrary.org/search.json?q=crime+and+punishment&fields=key,title,author_name,editions,editions.key,editions.title,editions.ebook_access,editions.language,first_publish_year,subject,cover_i";
 
@@ -40,19 +52,15 @@ namespace OpenLibrary
 			{
 				try
 				{
-					// Elküldjük a GET kérést az OpenLibrary API-hoz
 					HttpResponseMessage response = await client.GetAsync(apiUrl);
 
-					// Ellenõrizzük a választ
 					if (response.IsSuccessStatusCode)
 					{
-						// Olvassuk ki a választ JSON formátumban
 						dynamic jsonResponse = await response.Content.ReadAsAsync<dynamic>();
 
-						// Feldolgozzuk a választ és hozzáadjuk a találatokat a listához
 						foreach (var doc in jsonResponse["docs"])
 						{
-							string key = doc["key"]?.ToString();
+							string key = doc["key"].ToString();
 							string title = doc["title"]?.ToString();
 							List<string> authorNames = new List<string>();
 							if (doc["author_name"] != null)
@@ -73,6 +81,7 @@ namespace OpenLibrary
 
 							results.Add(new Book
 							{
+								Key = key,
 								Title = title,
 								AuthorNames = authorNames,
 								FirstPublishYear=firstPublishYear,
@@ -99,8 +108,9 @@ namespace OpenLibrary
 	public class Book
 	{
 		public string Key { get; set; }
+		public string ISBN { get; set; }
 		public string Title { get; set; }
-		public List<string> AuthorNames { get; set; }
+		public List<string> AuthorNames { get; set; }=new List<string>();
 		public string AuthorNamesAsString => string.Join(", ", AuthorNames);
 		public int? FirstPublishYear { get; set; }
 		public List<string> Subject { get; set; }
