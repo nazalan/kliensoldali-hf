@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Net.Http;
+using OpenLibrary.Models;
 //using System.Windows.Navigation;
 using Windows.Devices.Enumeration;
 
@@ -103,28 +104,5 @@ namespace OpenLibrary
 
 			return results;
 		}
-	}
-
-	public class Book
-	{
-		public string Key { get; set; }
-		public string ISBN { get; set; }
-		public string Title { get; set; }
-		public List<string> AuthorNames { get; set; }=new List<string>();
-		public string AuthorNamesAsString => string.Join(", ", AuthorNames);
-		public int? FirstPublishYear { get; set; }
-		public List<string> Subject { get; set; }
-		public List<Edition> Editions { get; set; }
-		public string CoverImageUrl { get; set; }
-	}
-
-	public class Edition
-	{
-		public string Key { get; set; }
-		public string Title { get; set; }
-		public int Number { get; set; }
-		public string Language { get; set; }
-		public string EbookAccess { get; set; }
-
 	}
 }

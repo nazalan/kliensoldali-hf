@@ -11,24 +11,16 @@
 
 
     <Grid>
-        <TextBlock Text="Vegre itt" FontSize="20" />
-        <ListView x:ConnectionId='2' x:Name="BookListView" Margin="0,40,0,0">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Title}" FontSize="20"/>
-                        <TextBlock FontSize="16">
-                        <Run Text="by"/>
-                        <Run Text="{Binding AuthorNamesAsString}"/>
-                        </TextBlock>
-                        <TextBlock FontSize="13">
-                        <Run Text="First published in "/>
-                        <Run Text="{Binding FirstPublishYear}"/>
-                        </TextBlock>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <TextBlock Text="{Binding Key}" FontSize="20" />
+
+        <StackPanel Margin="0,40,0,0">
+            <Image Width="100" Height="150" Source="{Binding CoverImageUrl}"/>
+            <TextBlock Text="{Binding Title}" FontSize="20"/>
+            <!--<TextBlock FontSize="16" Text="{Binding AuthorNames}"/>-->
+            <TextBlock FontSize="16" Text="{Binding AuthorNamesAsString}"/>
+            <TextBlock FontSize="13"  Text="{Binding FirstPublishYear}">
+            </TextBlock>
+        </StackPanel>
     </Grid>
 
 

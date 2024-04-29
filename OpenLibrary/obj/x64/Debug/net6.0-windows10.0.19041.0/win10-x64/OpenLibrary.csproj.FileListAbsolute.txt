@@ -297,3 +297,4 @@ C:\work\Kiltech\hf\kliensoldali-hf\OpenLibrary\obj\x64\Debug\net6.0-windows10.0.
 C:\work\Kiltech\hf\kliensoldali-hf\OpenLibrary\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\BookDetailPage.g.cs
 C:\work\Kiltech\hf\kliensoldali-hf\OpenLibrary\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\BookDetailPage.xaml
 C:\work\Kiltech\hf\kliensoldali-hf\OpenLibrary\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\BookDetailPage.xbf
+C:\work\Kiltech\hf\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Mvvm.dll

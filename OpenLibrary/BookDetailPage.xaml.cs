@@ -16,6 +16,8 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Reflection.Metadata;
 using static System.Reflection.Metadata.BlobBuilder;
+using Newtonsoft.Json.Linq;
+using OpenLibrary.Models;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -27,16 +29,30 @@ namespace OpenLibrary
     /// </summary>
     public sealed partial class BookDetailPage : Page
     {
-        public BookDetailPage(string bookUri)
+		private Book book1;
+		public BookDetailPage(string bookUri)
         {
             this.InitializeComponent();
-			_ = SearchBooksAsync(bookUri);
+			LoadBookAsync(bookUri);
 
 		}
 
-		private async Task SearchBooksAsync(string uri)
+		private async void LoadBookAsync(string uri)
 		{
-			List<Book> results = new List<Book>();
+			try
+			{
+				Book book = await SearchWorkAsyncByKey(uri);
+				this.DataContext = book;
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Hiba történt: " + ex.Message);
+			}
+		}
+
+		private async Task<Book> SearchWorkAsyncByKey(string uri)
+		{
+			Book results;
 			string apiUrl = $"https://openlibrary.org{uri}.json";
 
 			using (HttpClient client = new HttpClient())
@@ -49,15 +65,35 @@ namespace OpenLibrary
 					{
 						dynamic jsonResponse = await response.Content.ReadAsAsync<dynamic>();
 
+						//Title
 						string title = jsonResponse["title"]?.ToString();
+						//Cover
+						string coverId = jsonResponse["covers"]?[0].ToString();
+						string coverImageUrl = (coverId != null) ? $"https://covers.openlibrary.org/b/id/{coverId}-L.jpg" : null;
+						//Authors
+						JArray authorsArray = (JArray)jsonResponse["authors"];
+						List<string> authorKeys = new List<string>();
+						foreach (JObject authorObject in authorsArray)
+						{
+							string key = (string)authorObject["author"]["key"];
+							authorKeys.Add(key);
+						}
+						List<string> authorNames = new List<string>();
+						foreach (string key in authorKeys)
+						{
+							Author author = new Author();
+							await author.SearchAuthorsAsyncByKey(key);
+							authorNames.Add(author.Name);
+						}
 
 
-						results.Add(new Book
+						//new Book
+						results = (new Book
 						{
 							Title = title,
-							//AuthorNames = authorNames,
-							//FirstPublishYear = firstPublishYear,
-							//CoverImageUrl = coverImageUrl
+							CoverImageUrl = coverImageUrl,
+							AuthorNames= authorNames
+
 						});
 
 					}
@@ -72,21 +108,10 @@ namespace OpenLibrary
 				}
 			}
 
-			results.Add(new Book
-			{
-				Title = "title",
-				AuthorNames = { "authorNames", "authorNames2" },
-				FirstPublishYear = 20,
-			});
-			results.Add(new Book
-			{
-				Title = "title2",
-				AuthorNames = { "authorNames2", "authorNames" },
-				FirstPublishYear = 202,
-			});
-
-			BookListView.ItemsSource = results;
+			return results;
 		}
+
+		
 
 	}
 }

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "9GbW/cE33U4wfjiZg9yfy58baczFFxXqNBs3zDnNv/CKamivhUyVc//B5isv74LBpV3MGjzbizTx99aVbpKgOA==",
+  "dgSpecHash": "bl9iD3nc195DRV9qflfwa3czmaek2hB6kGfnXn5le351hX6kQVodCpo25Le8AALeh/KFuqqDQ7T57w9m/dLPrA==",
   "success": true,
   "projectFilePath": "C:\\work\\Kiltech\\hf\\kliensoldali-hf\\OpenLibrary\\OpenLibrary.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.aspnet.webapi.client\\6.0.0\\microsoft.aspnet.webapi.client.6.0.0.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.755\\microsoft.windows.sdk.buildtools.10.0.22621.755.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.windowsappsdk\\1.4.230913002\\microsoft.windowsappsdk.1.4.230913002.nupkg.sha512",
