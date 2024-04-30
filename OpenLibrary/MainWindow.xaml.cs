@@ -10,11 +10,12 @@ using System.ComponentModel;
 
 namespace OpenLibrary
 {
-	public sealed partial class MainWindow : Window
+	public partial class MainWindow : Window
 	{
 		public MainWindow()
 		{
 			this.InitializeComponent();
+			//rootFrame.Navigate(typeof(Home));
 		}
 	}
 

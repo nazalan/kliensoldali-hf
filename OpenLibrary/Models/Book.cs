@@ -13,8 +13,10 @@ namespace OpenLibrary.Models
 		public string Title { get; set; }
 		public List<string> AuthorNames { get; set; } = new List<string>();
 		public string AuthorNamesAsString => string.Join(", ", AuthorNames);
+		public string Description { get; set; }
 		public int? FirstPublishYear { get; set; }
-		public List<string> Subject { get; set; }
+		public List<string> Subjects { get; set; }
+		public string SubjectsAsString => string.Join(", ", Subjects);
 		public List<Edition> Editions { get; set; }
 		public string CoverImageUrl { get; set; }
 	}

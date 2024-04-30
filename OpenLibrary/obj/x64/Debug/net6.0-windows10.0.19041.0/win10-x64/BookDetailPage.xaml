@@ -9,22 +9,27 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-
     <Grid>
-        <TextBlock Text="{Binding Key}" FontSize="20" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame x:ConnectionId='2' x:Name="bookFrame" />
+        <!-- Visszafelé nyíl gomb -->
+        <Button x:ConnectionId='3' Grid.Row="0" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Left"                              >
+            <SymbolIcon Symbol="Back"/>
+        </Button>
 
-        <StackPanel Margin="0,40,0,0">
+        <!-- Tartalom -->
+        <StackPanel Grid.Row="1" Margin="10">
+            <TextBlock Text="{Binding Key}" FontSize="20" />
             <Image Width="100" Height="150" Source="{Binding CoverImageUrl}"/>
             <TextBlock Text="{Binding Title}" FontSize="20"/>
-            <!--<TextBlock FontSize="16" Text="{Binding AuthorNames}"/>-->
             <TextBlock FontSize="16" Text="{Binding AuthorNamesAsString}"/>
-            <TextBlock FontSize="13"  Text="{Binding FirstPublishYear}">
-            </TextBlock>
+            <TextBlock FontSize="13" Text="{Binding FirstPublishYear}"/>
+            <TextBlock FontSize="13" Text="{Binding SubjectsAsString}"/>
+            <TextBlock FontSize="13" Text="{Binding Description}" TextWrapping="Wrap"/>
         </StackPanel>
     </Grid>
-
-
-
-
 </Page>
 

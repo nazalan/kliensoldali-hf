@@ -12,8 +12,8 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="BookDetailPage.xaml" />
-    <None Remove="Home.xaml" />
+    <None Remove="Details.xaml" />
+    <None Remove="MainPAge.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,12 +43,12 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
-    <Page Update="BookDetailPage.xaml">
+    <Page Update="Details.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Home.xaml">
+    <Page Update="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

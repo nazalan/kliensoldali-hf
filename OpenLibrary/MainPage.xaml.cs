@@ -1,12 +1,22 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls.Primitives;
+using Microsoft.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Input;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Navigation;
+using OpenLibrary.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
-using System.Net.Http;
-using OpenLibrary.Models;
-//using System.Windows.Navigation;
 using Windows.Devices.Enumeration;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using System.Net.Http;
+using Windows.Storage;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -16,38 +26,61 @@ namespace OpenLibrary
 	/// <summary>
 	/// An empty page that can be used on its own or navigated to within a Frame.
 	/// </summary>
-	public sealed partial class Home : Page
+	public sealed partial class MainPage : Page
 	{
 
-		public Home()
+		string query = "";
+		public MainPage()
 		{
 			this.InitializeComponent();
+			LoadQuery();
 		}
-
-		private async void SearchButton_Click(object sender, RoutedEventArgs e)
+		private void LoadQuery()
 		{
-			string searchQuery = searchTextBox.Text;
-			List<Book> searchResults = await SearchBooksAsync(searchQuery);
-
-			resultsListView.ItemsSource = searchResults;
+			if (ApplicationData.Current.LocalSettings.Values.ContainsKey("Query"))
+			{
+				query = ApplicationData.Current.LocalSettings.Values["Query"].ToString();
+			}
+			else
+			{
+				query = "crime+and+punishment";
+			}
 		}
+
 
 		private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
 		{
 			Button button = (Button)sender;
 			string key = button.Tag.ToString();
-
-			BookDetailPage mynewPage = new BookDetailPage(key);
-			this.Content = mynewPage;
+			Frame.Navigate(typeof(Details), key);
+		}
+		private void SearchButton_Click(object sender, RoutedEventArgs e)
+		{
+			if (!string.IsNullOrWhiteSpace(searchTextBox.Text))
+			{
+				query = searchTextBox.Text;
+				ApplicationData.Current.LocalSettings.Values["Query"] = query;
+				Search();
+			}
+		}
+		protected override void OnNavigatedTo(NavigationEventArgs e)
+		{
+			Search();
+			base.OnNavigatedTo(e);
 		}
 
+		private async void Search()
+		{
+			List<Book> searchResults = await SearchBooksAsync(query);
+			resultsListView.ItemsSource = searchResults;
+		}
 
 		private async Task<List<Book>> SearchBooksAsync(string searchQuery)
 		{
 			List<Book> results = new List<Book>();
 
-			//string apiUrl = $"https://openlibrary.org/search.json?q={searchQuery}";
-			string apiUrl = $"https://openlibrary.org/search.json?q=crime+and+punishment&fields=key,title,author_name,editions,editions.key,editions.title,editions.ebook_access,editions.language,first_publish_year,subject,cover_i";
+			string apiUrl = $"https://openlibrary.org/search.json?limit=20&q={searchQuery}&fields=key,title,cover_i,author_name,first_publish_year.json";
+			//string apiUrl = $"https://openlibrary.org/search.json?q=";
 
 			using (HttpClient client = new HttpClient())
 			{
@@ -61,7 +94,7 @@ namespace OpenLibrary
 
 						foreach (var doc in jsonResponse["docs"])
 						{
-							string key = doc["key"].ToString();
+							string key = doc["key"].ToString().Trim().Replace(" ", "");
 							string title = doc["title"]?.ToString();
 							List<string> authorNames = new List<string>();
 							if (doc["author_name"] != null)
@@ -78,14 +111,14 @@ namespace OpenLibrary
 								firstPublishYear = (int)doc["first_publish_year"];
 							}
 							string coverId = doc["cover_i"]?.ToString();
-							string coverImageUrl = (coverId != null) ? $"https://covers.openlibrary.org/b/id/{coverId}-L.jpg" : null;
+							string coverImageUrl = (coverId != null) ? $"https://covers.openlibrary.org/b/id/{coverId}-S.jpg" : null;
 
 							results.Add(new Book
 							{
 								Key = key,
 								Title = title,
 								AuthorNames = authorNames,
-								FirstPublishYear=firstPublishYear,
+								FirstPublishYear = firstPublishYear,
 								CoverImageUrl = coverImageUrl
 							});
 						}

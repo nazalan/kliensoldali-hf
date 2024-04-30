@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="OpenLibrary.Details"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OpenLibrary"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame x:Name="bookFrame" />
+        <!-- Visszafelé nyíl gomb -->
+        <Button Grid.Row="0" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Left" Click="HyperlinkButton_Click">
+            <SymbolIcon Symbol="Back"/>
+        </Button>
+
+        <!-- Tartalom -->
+        <StackPanel Grid.Row="1" Margin="10">
+            <TextBlock Text="{Binding Key}" FontSize="20" />
+            <Image Width="100" Height="150" Source="{Binding CoverImageUrl}"/>
+            <TextBlock Text="{Binding Title}" FontSize="20"/>
+            <TextBlock FontSize="16" Text="{Binding AuthorNamesAsString}"/>
+            <TextBlock FontSize="13" Text="{Binding FirstPublishYear}"/>
+            <TextBlock FontSize="13" Text="{Binding SubjectsAsString}"/>
+            <TextBlock FontSize="13" Text="{Binding Description}" TextWrapping="Wrap"/>
+        </StackPanel>
+    </Grid>
+</Page>

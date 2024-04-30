@@ -224,7 +224,7 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[14];
+            _typeNameTable = new string[17];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -232,15 +232,18 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
             _typeNameTable[4] = "OpenLibrary.BookDetailPage";
             _typeNameTable[5] = "Microsoft.UI.Xaml.Controls.Page";
             _typeNameTable[6] = "Microsoft.UI.Xaml.Controls.UserControl";
-            _typeNameTable[7] = "OpenLibrary.Home";
-            _typeNameTable[8] = "OpenLibrary.MainWindow";
-            _typeNameTable[9] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[10] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[11] = "Microsoft.UI.Xaml.DependencyObject";
-            _typeNameTable[12] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[13] = "Int32";
+            _typeNameTable[7] = "OpenLibrary.Details";
+            _typeNameTable[8] = "OpenLibrary.Home";
+            _typeNameTable[9] = "OpenLibrary.MainPage";
+            _typeNameTable[10] = "OpenLibrary.MainWindow";
+            _typeNameTable[11] = "Microsoft.UI.Xaml.Window";
+            _typeNameTable[12] = "OpenLibrary.Page2";
+            _typeNameTable[13] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[14] = "Microsoft.UI.Xaml.DependencyObject";
+            _typeNameTable[15] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[16] = "Int32";
 
-            _typeTable = new global::System.Type[14];
+            _typeTable = new global::System.Type[17];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -248,13 +251,16 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
             _typeTable[4] = typeof(global::OpenLibrary.BookDetailPage);
             _typeTable[5] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
             _typeTable[6] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
-            _typeTable[7] = typeof(global::OpenLibrary.Home);
-            _typeTable[8] = typeof(global::OpenLibrary.MainWindow);
-            _typeTable[9] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[10] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[11] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
-            _typeTable[12] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[13] = typeof(global::System.Int32);
+            _typeTable[7] = typeof(global::OpenLibrary.Details);
+            _typeTable[8] = typeof(global::OpenLibrary.Home);
+            _typeTable[9] = typeof(global::OpenLibrary.MainPage);
+            _typeTable[10] = typeof(global::OpenLibrary.MainWindow);
+            _typeTable[11] = typeof(global::Microsoft.UI.Xaml.Window);
+            _typeTable[12] = typeof(global::OpenLibrary.Page2);
+            _typeTable[13] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[14] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
+            _typeTable[15] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[16] = typeof(global::System.Int32);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -290,9 +296,12 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
         }
 
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
-        private object Activate_7_Home() { return new global::OpenLibrary.Home(); }
-        private object Activate_8_MainWindow() { return new global::OpenLibrary.MainWindow(); }
-        private object Activate_10_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_7_Details() { return new global::OpenLibrary.Details(); }
+        private object Activate_8_Home() { return new global::OpenLibrary.Home(); }
+        private object Activate_9_MainPage() { return new global::OpenLibrary.MainPage(); }
+        private object Activate_10_MainWindow() { return new global::OpenLibrary.MainWindow(); }
+        private object Activate_12_Page2() { return new global::OpenLibrary.Page2(); }
+        private object Activate_13_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -300,7 +309,7 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_12_IList(object instance, object item)
+        private void VectorAdd_15_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -351,27 +360,48 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
                 xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 7:   //  OpenLibrary.Home
+            case 7:   //  OpenLibrary.Details
                 userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_Home;
+                userType.Activator = Activate_7_Details;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  OpenLibrary.MainWindow
+            case 8:   //  OpenLibrary.Home
+                userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_8_Home;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 9:   //  OpenLibrary.MainPage
+                userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_9_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  OpenLibrary.MainWindow
                 userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_8_MainWindow;
+                userType.Activator = Activate_10_MainWindow;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  Microsoft.UI.Xaml.Window
+            case 11:   //  Microsoft.UI.Xaml.Window
                 xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 10:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 12:   //  OpenLibrary.Page2
+                userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_12_Page2;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_10_TreeViewNode;
+                userType.Activator = Activate_13_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -383,18 +413,18 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 11:   //  Microsoft.UI.Xaml.DependencyObject
+            case 14:   //  Microsoft.UI.Xaml.DependencyObject
                 xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 12:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 15:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_12_IList;
+                userType.CollectionAdd = VectorAdd_15_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 13:   //  Int32
+            case 16:   //  Int32
                 xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }

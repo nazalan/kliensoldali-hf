@@ -13,7 +13,6 @@ mc:Ignorable="d">
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
             <TextBox x:ConnectionId='5' x:Name="searchTextBox" Width="300" PlaceholderText="Search by keyword" Margin="5"/>
             <Button x:ConnectionId='6' Content="Search"                            Margin="5"/>
