@@ -79,7 +79,7 @@ namespace OpenLibrary
 		{
 			List<Book> results = new List<Book>();
 
-			string apiUrl = $"https://openlibrary.org/search.json?limit=20&q={searchQuery}&fields=key,title,cover_i,author_name,first_publish_year.json";
+			string apiUrl = $"https://openlibrary.org/search.json?limit=20&q={searchQuery}&fields=key,title,cover_i,author_name,first_publish_year&.json";
 			//string apiUrl = $"https://openlibrary.org/search.json?q=";
 
 			using (HttpClient client = new HttpClient())
@@ -96,28 +96,28 @@ namespace OpenLibrary
 						{
 							string key = doc["key"].ToString().Trim().Replace(" ", "");
 							string title = doc["title"]?.ToString();
-							List<string> authorNames = new List<string>();
+							List<Author> authors = new List<Author>();
 							if (doc["author_name"] != null)
 							{
 								foreach (var authorName in doc["author_name"])
 								{
-									authorNames.Add(authorName?.ToString());
+									authors.Add(new Author(Name=authorName?.ToString()));
 								}
 							}
 
-							int? firstPublishYear = null;
+							int firstPublishYear=0;
 							if (doc["first_publish_year"] != null)
 							{
 								firstPublishYear = (int)doc["first_publish_year"];
 							}
 							string coverId = doc["cover_i"]?.ToString();
-							string coverImageUrl = (coverId != null) ? $"https://covers.openlibrary.org/b/id/{coverId}-S.jpg" : null;
+							string coverImageUrl = (coverId != null) ? $"https://covers.openlibrary.org/b/id/{coverId}-M.jpg" : null;
 
 							results.Add(new Book
 							{
 								Key = key,
 								Title = title,
-								AuthorNames = authorNames,
+								Authors = authors,
 								FirstPublishYear = firstPublishYear,
 								CoverImageUrl = coverImageUrl
 							});

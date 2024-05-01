@@ -11,10 +11,21 @@ namespace OpenLibrary.Models
 		public string Key { get; set; }
 		public string ISBN { get; set; }
 		public string Title { get; set; }
-		public List<string> AuthorNames { get; set; } = new List<string>();
-		public string AuthorNamesAsString => string.Join(", ", AuthorNames);
+		public List<Author> Authors { get; set; }
+		public string AuthorNamesAsString
+		{
+			get
+			{
+				if (Authors == null || Authors.Count == 0)
+					return "";
+
+				var authorNames = Authors.Select(author => author.Name);
+				return string.Join(", ", authorNames);
+			}
+		}
 		public string Description { get; set; }
-		public int? FirstPublishYear { get; set; }
+		public int FirstPublishYear { get; set; }
+		public string FirstPublishDate { get; set; }
 		public List<string> Subjects { get; set; }
 		public string SubjectsAsString => string.Join(", ", Subjects);
 		public List<Edition> Editions { get; set; }

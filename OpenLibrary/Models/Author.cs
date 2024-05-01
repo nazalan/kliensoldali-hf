@@ -12,7 +12,16 @@ namespace OpenLibrary.Models
 	{
 		public string Key { get; set; }
 		public string Name { get; set; }
+		public string Link { get; set; }
 		public int BirthDate { get; set; }
+		public Author()
+		{
+
+		}
+		public Author(string name)
+		{
+			Name = name;
+		}
 
 		public async Task SearchAuthorsAsyncByKey(string uri)
 		{
@@ -29,10 +38,15 @@ namespace OpenLibrary.Models
 					{
 						dynamic jsonResponse = await response.Content.ReadAsAsync<dynamic>();
 
-						string name = jsonResponse["name"]?.ToString();
-
+						//Name
+						Name = jsonResponse["name"]?.ToString();
+						//Link
+						dynamic links = jsonResponse["links"];
+						if (links != null && links.Count > 0)
+						{
+							Link = links[0]["url"]?.ToString();
+						}
 						//TODO
-						Name = name;
 
 					}
 					else

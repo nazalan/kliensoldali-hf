@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Page
     x:Class="OpenLibrary.Details"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -14,9 +14,9 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Frame x:Name="bookFrame" />
+        <Frame x:ConnectionId='2' x:Name="bookFrame" />
         <!-- Visszafelé nyíl gomb -->
-        <Button Grid.Row="0" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Left" Click="HyperlinkButton_Click">
+        <Button x:ConnectionId='3' Grid.Row="0" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Left"                              >
             <SymbolIcon Symbol="Back"/>
         </Button>
 
@@ -24,7 +24,7 @@
         <StackPanel Grid.Row="1" Margin="10">
             <TextBlock Text="{Binding Key}" FontSize="20" />
             <!-- Egy Popup elem a kép megjelenítéséhez -->
-            <Popup x:Name="imagePopup">
+            <Popup x:ConnectionId='4' x:Name="imagePopup">
                 <Grid>
                     <Border Background="White" Opacity="0.8"/>
                     <!-- Háttér maszkolása -->
@@ -32,21 +32,22 @@
                         <Image Width="400" Height="600" Source="{Binding CoverImageUrl}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                     <!-- X ikon -->
-                    <Button Click="CloseButton_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10,10,0">
+                    <Button x:ConnectionId='7'                           HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10,10,0">
                         <SymbolIcon Symbol="Cancel"/>
                     </Button>
                 </Grid>
             </Popup>
 
             <!-- Egy gomb a popup megjelenítéséhez -->
-            <Button Grid.Row="1" Margin="10" Click="Image_Button_Click">
+            <Button x:ConnectionId='5' Grid.Row="1" Margin="10"                           >
                 <Image Width="100" Height="150" Source="{Binding CoverImageUrl}"/>
             </Button>
             <TextBlock Text="{Binding Title}" FontSize="20"/>
-            <StackPanel x:Name="authorPanel" Margin="0,5,0,0"/>
+            <StackPanel x:ConnectionId='6' x:Name="authorPanel" Margin="0,5,0,0"/>
             <TextBlock FontSize="13" Text="{Binding FirstPublishDate}"/>
             <TextBlock FontSize="13" Text="{Binding SubjectsAsString}" TextWrapping="Wrap"/>
             <TextBlock FontSize="13" Text="{Binding Description}" TextWrapping="Wrap"/>
         </StackPanel>
     </Grid>
 </Page>
+

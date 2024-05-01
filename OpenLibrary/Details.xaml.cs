@@ -16,28 +16,49 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Microsoft.UI.Xaml.Media.Imaging;
+
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
 namespace OpenLibrary
 {
-	/// <summary>
-	/// An empty page that can be used on its own or navigated to within a Frame.
-	/// </summary>
 	public sealed partial class Details : Page
 	{
-		string bookUri = "";
+		private Popup myPopup;
 		public Details()
 		{
 			this.InitializeComponent();
 			
 		}
+
+		private void Image_Button_Click(object sender, RoutedEventArgs e)
+		{
+			Book book = (Book)this.DataContext;
+			if (book != null)
+			{
+				book.CoverImageUrl = book.CoverImageUrl.Replace("-M", "-L");
+			}
+			imagePopup.IsOpen = true;
+		}
+
+		private void CloseButton_Click(object sender, RoutedEventArgs e)
+		{
+			Book book = (Book)this.DataContext;
+			if (book != null)
+			{
+				book.CoverImageUrl = book.CoverImageUrl.Replace("-L", "-M");
+			}
+			imagePopup.IsOpen = false;
+		}
+
+
 		protected override async void OnNavigatedTo(NavigationEventArgs e)
 		{
 			if (e.Parameter is string)
 			{
-				bookUri=e.Parameter.ToString();
+				string bookUri=e.Parameter.ToString();
 				await LoadBookAsync(bookUri);
 
 			}
@@ -55,10 +76,37 @@ namespace OpenLibrary
 			{
 				Book book = await SearchWorkAsyncByKey(uri);
 				this.DataContext = book;
+				LoadAuthorLinks(authorPanel, book.Authors);
 			}
 			catch (Exception ex)
 			{
-				throw new Exception("Hiba történt: " + ex.Message);
+				throw new Exception("Hiba történt: " + ex.Message +"   " +uri);
+			}
+		}
+		private void LoadAuthorLinks(StackPanel panel, List<Author> authors)
+		{
+			foreach (var author in authors)
+			{
+				if (!string.IsNullOrEmpty(author.Link))
+				{
+					HyperlinkButton hyperlinkButton = new HyperlinkButton
+					{
+						Content = author.Name,
+						NavigateUri = new Uri(author.Link),
+						Margin = new Thickness(0, 0, 5, 0)
+					};
+					panel.Children.Add(hyperlinkButton);
+				}
+				else
+				{
+					TextBlock textBlock = new TextBlock
+					{
+						Text = author.Name,
+						Margin = new Thickness(0, 0, 5, 0),
+						FontSize = 16 
+					};
+					panel.Children.Add(textBlock);
+				}
 			}
 		}
 
@@ -83,7 +131,7 @@ namespace OpenLibrary
 						string title = jsonResponse["title"]?.ToString();
 						//Cover
 						string coverId = jsonResponse["covers"]?[0].ToString();
-						string coverImageUrl = (coverId != null) ? $"https://covers.openlibrary.org/b/id/{coverId}-S.jpg" : null;
+						string coverImageUrl = (coverId != null) ? $"https://covers.openlibrary.org/b/id/{coverId}-M.jpg" : null;
 						//Authors
 						JArray authorsArray = (JArray)jsonResponse["authors"];
 						List<string> authorKeys = new List<string>();
@@ -92,17 +140,18 @@ namespace OpenLibrary
 							string authorkey = (string)authorObject["author"]["key"];
 							authorKeys.Add(authorkey);
 						}
-						List<string> authorNames = new List<string>();
+						List<Author> authorNames = new List<Author>();
 						foreach (string authorkey in authorKeys)
 						{
 							Author author = new Author();
 							await author.SearchAuthorsAsyncByKey(authorkey);
-							authorNames.Add(author.Name);
+							authorNames.Add(author);
 						}
 						//Description
 						string description = "";
-						if (jsonResponse["description"]!=null)
-						{JToken descriptionToken = jsonResponse["description"];
+						if (jsonResponse["description"] != null)
+						{
+							JToken descriptionToken = jsonResponse["description"];
 							if (descriptionToken.Type == JTokenType.Object)
 							{
 								description = descriptionToken["value"]?.ToString();
@@ -113,10 +162,10 @@ namespace OpenLibrary
 							}
 						}
 						//PublishDate
-						int? firstPublishYear = null;
+						string firstPublishDate = null;
 						if (jsonResponse["first_publish_date"] != null)
 						{
-							firstPublishYear = (int)jsonResponse["first_publish_date"];
+							firstPublishDate = jsonResponse["first_publish_date"];
 						}
 						//Subjects
 						List<string> subjects = new List<string>();
@@ -133,9 +182,9 @@ namespace OpenLibrary
 							Key = key,
 							Title = title,
 							CoverImageUrl = coverImageUrl,
-							AuthorNames = authorNames,
+							Authors = authorNames,
 							Description = description,
-							FirstPublishYear = firstPublishYear,
+							FirstPublishDate = firstPublishDate,
 							Subjects = subjects,
 						});
 
