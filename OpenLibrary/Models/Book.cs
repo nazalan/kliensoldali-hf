@@ -29,6 +29,7 @@ namespace OpenLibrary.Models
 		public List<string> Subjects { get; set; }
 		public string SubjectsAsString => string.Join(", ", Subjects);
 		public List<Edition> Editions { get; set; }
+		public string CoverId {  get; set; }
 		public string CoverImageUrl { get; set; }
 	}
 }

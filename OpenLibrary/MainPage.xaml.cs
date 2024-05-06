@@ -17,6 +17,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using System.Net.Http;
 using Windows.Storage;
+using Windows.Globalization;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -56,9 +57,14 @@ namespace OpenLibrary
 		}
 		private void SearchButton_Click(object sender, RoutedEventArgs e)
 		{
-			if (!string.IsNullOrWhiteSpace(searchTextBox.Text))
+			if (!string.IsNullOrWhiteSpace(searchTextBox.Text) || !string.IsNullOrWhiteSpace(searchLanguage.Text) || !string.IsNullOrWhiteSpace(searchAuthor.Text))
 			{
 				query = searchTextBox.Text;
+				string language = searchLanguage.Text;
+				string langParameter = !string.IsNullOrWhiteSpace(language) ? $"&lang={Uri.EscapeDataString(language.Substring(0, Math.Min(2, language.Length)))}" : "";
+				string author = searchAuthor.Text;
+				string authorParameter = !string.IsNullOrWhiteSpace(author) ? $"&author={author}" : "";
+				query = query + langParameter + authorParameter;
 				ApplicationData.Current.LocalSettings.Values["Query"] = query;
 				Search();
 			}
@@ -79,7 +85,8 @@ namespace OpenLibrary
 		{
 			List<Book> results = new List<Book>();
 
-			string apiUrl = $"https://openlibrary.org/search.json?limit=20&q={searchQuery}&fields=key,title,cover_i,author_name,first_publish_year&.json";
+			string apiUrl = $"https://openlibrary.org/search.json?limit=20&q={searchQuery}&fields=key,title,cover_i,author_name,editions,editions.key,editions.title,editions.ebook_access,editions.language,first_publish_year&.json";
+			System.Diagnostics.Debug.WriteLine(apiUrl);
 			//string apiUrl = $"https://openlibrary.org/search.json?q=";
 
 			using (HttpClient client = new HttpClient())
@@ -96,6 +103,37 @@ namespace OpenLibrary
 						{
 							string key = doc["key"].ToString().Trim().Replace(" ", "");
 							string title = doc["title"]?.ToString();
+
+							int langIndex = apiUrl.IndexOf("lang=");
+							string language = "";
+							if (langIndex != -1 && langIndex + 5 < apiUrl.Length)
+							{
+								language = apiUrl.Substring(langIndex + 5, 2);
+							}
+							string foreignTitle = null;
+							if (doc["editions"] != null)
+							{
+								foreach (var edition in doc["editions"]["docs"])
+								{
+									if (edition["language"] != null)
+									{
+										foreach (var lang in edition["language"])
+										{
+											if (lang.ToString().Contains(language))
+											{
+												foreignTitle = edition["title"]?.ToString();
+												break;
+											}
+										}
+									}
+									if (!string.IsNullOrEmpty(foreignTitle))
+									{
+										break;
+									}
+								}
+							}
+							string finalTitle = !string.IsNullOrEmpty(foreignTitle) ? foreignTitle : title;
+
 							List<Author> authors = new List<Author>();
 							if (doc["author_name"] != null)
 							{
@@ -116,7 +154,7 @@ namespace OpenLibrary
 							results.Add(new Book
 							{
 								Key = key,
-								Title = title,
+								Title = finalTitle,
 								Authors = authors,
 								FirstPublishYear = firstPublishYear,
 								CoverImageUrl = coverImageUrl

@@ -29,7 +29,7 @@
                     <Border Background="White" Opacity="0.8"/>
                     <!-- Háttér maszkolása -->
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Image Width="400" Height="600" Source="{Binding CoverImageUrl}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Image x:ConnectionId='8' x:Name="image" Width="400" Height="600" Source="{Binding CoverImageUrl}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                     <!-- X ikon -->
                     <Button x:ConnectionId='7'                           HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10,10,0">

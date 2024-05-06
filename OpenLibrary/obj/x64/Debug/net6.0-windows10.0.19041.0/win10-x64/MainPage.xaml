@@ -16,9 +16,10 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
-            <TextBox x:ConnectionId='5' x:Name="searchTextBox" Width="300" PlaceholderText="Search by keyword" Margin="5"/>
-            <Button x:ConnectionId='6' Content="Search"                            Margin="5"/>
-            <!--<Button  x:Name="button" Click="HyperlinkButton_Click" Content="Details"/>-->
+            <TextBox x:ConnectionId='5' x:Name="searchTextBox" Width="300" PlaceholderText="Search by keyword" Margin="20"/>
+            <TextBox x:ConnectionId='6' x:Name="searchAuthor" Width="300" PlaceholderText="Search by author" Margin="20"/>
+            <TextBox x:ConnectionId='7' x:Name="searchLanguage" Width="300" PlaceholderText="Search by language" Margin="20"/>
+            <Button x:ConnectionId='8' Content="Search"                            Margin="5"/>
         </StackPanel>
         <ListView x:ConnectionId='2' x:Name="resultsListView" Grid.Row="1">
                 <ListView.ItemTemplate>

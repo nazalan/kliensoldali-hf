@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Microsoft.UI.Xaml.Media.Imaging;
+using static System.Net.Mime.MediaTypeNames;
 
 
 // To learn more about WinUI, the WinUI project structure,
@@ -26,7 +27,7 @@ namespace OpenLibrary
 {
 	public sealed partial class Details : Page
 	{
-		private Popup myPopup;
+		private Book book;
 		public Details()
 		{
 			this.InitializeComponent();
@@ -35,21 +36,13 @@ namespace OpenLibrary
 
 		private void Image_Button_Click(object sender, RoutedEventArgs e)
 		{
-			Book book = (Book)this.DataContext;
-			if (book != null)
-			{
-				book.CoverImageUrl = book.CoverImageUrl.Replace("-M", "-L");
-			}
+			book.CoverImageUrl = book.CoverImageUrl.Replace("-M", "-L");
+			image.Source = new BitmapImage(new Uri(book.CoverImageUrl));
 			imagePopup.IsOpen = true;
 		}
 
 		private void CloseButton_Click(object sender, RoutedEventArgs e)
 		{
-			Book book = (Book)this.DataContext;
-			if (book != null)
-			{
-				book.CoverImageUrl = book.CoverImageUrl.Replace("-L", "-M");
-			}
 			imagePopup.IsOpen = false;
 		}
 
@@ -74,7 +67,7 @@ namespace OpenLibrary
 		{
 			try
 			{
-				Book book = await SearchWorkAsyncByKey(uri);
+				book = await SearchWorkAsyncByKey(uri);
 				this.DataContext = book;
 				LoadAuthorLinks(authorPanel, book.Authors);
 			}
@@ -181,6 +174,7 @@ namespace OpenLibrary
 						{
 							Key = key,
 							Title = title,
+							CoverId= coverId,
 							CoverImageUrl = coverImageUrl,
 							Authors = authorNames,
 							Description = description,
