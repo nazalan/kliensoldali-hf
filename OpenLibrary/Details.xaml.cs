@@ -5,6 +5,7 @@ using Microsoft.UI.Xaml.Navigation;
 using Newtonsoft.Json.Linq;
 using OpenLibrary.Models;
 using OpenLibrary.Services;
+using OpenLibrary.Views;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -14,15 +15,15 @@ using System.Threading.Tasks;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace OpenLibrary
+namespace OpenLibrary.Views
 {
 	public sealed partial class Details : Page
 	{
-		private Book book;
+		Book book;
 		public Details()
 		{
 			this.InitializeComponent();
-			
+
 		}
 
 		private void Image_Button_Click(object sender, RoutedEventArgs e)
@@ -42,7 +43,7 @@ namespace OpenLibrary
 		{
 			if (e.Parameter is string)
 			{
-				string bookUri=e.Parameter.ToString();
+				string bookUri = e.Parameter.ToString();
 				await LoadBookAsync(bookUri);
 
 			}
@@ -65,7 +66,7 @@ namespace OpenLibrary
 			}
 			catch (Exception ex)
 			{
-				throw new Exception("Hiba történt: " + ex.Message +"   " +uri);
+				throw new Exception("Hiba történt: " + ex.Message + "   " + uri);
 			}
 		}
 		private void LoadAuthorLinks(StackPanel panel, List<Author> authors)
@@ -88,13 +89,13 @@ namespace OpenLibrary
 					{
 						Text = author.Name,
 						Margin = new Thickness(0, 0, 5, 0),
-						FontSize = 16 
+						FontSize = 16
 					};
 					panel.Children.Add(textBlock);
 				}
 			}
 		}
 
-		
+
 	}
 }

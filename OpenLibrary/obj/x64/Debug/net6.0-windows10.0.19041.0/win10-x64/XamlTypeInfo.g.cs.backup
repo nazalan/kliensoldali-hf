@@ -232,7 +232,7 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
             _typeNameTable[4] = "OpenLibrary.Details";
             _typeNameTable[5] = "Microsoft.UI.Xaml.Controls.Page";
             _typeNameTable[6] = "Microsoft.UI.Xaml.Controls.UserControl";
-            _typeNameTable[7] = "OpenLibrary.MainPage";
+            _typeNameTable[7] = "OpenLibrary.Views.MainPage";
             _typeNameTable[8] = "OpenLibrary.MainWindow";
             _typeNameTable[9] = "Microsoft.UI.Xaml.Window";
             _typeNameTable[10] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
@@ -248,7 +248,7 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
             _typeTable[4] = typeof(global::OpenLibrary.Details);
             _typeTable[5] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
             _typeTable[6] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
-            _typeTable[7] = typeof(global::OpenLibrary.MainPage);
+            _typeTable[7] = typeof(global::OpenLibrary.Views.MainPage);
             _typeTable[8] = typeof(global::OpenLibrary.MainWindow);
             _typeTable[9] = typeof(global::Microsoft.UI.Xaml.Window);
             _typeTable[10] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
@@ -291,7 +291,7 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
 
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
         private object Activate_4_Details() { return new global::OpenLibrary.Details(); }
-        private object Activate_7_MainPage() { return new global::OpenLibrary.MainPage(); }
+        private object Activate_7_MainPage() { return new global::OpenLibrary.Views.MainPage(); }
         private object Activate_8_MainWindow() { return new global::OpenLibrary.MainWindow(); }
         private object Activate_10_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
@@ -353,7 +353,7 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
                 xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 7:   //  OpenLibrary.MainPage
+            case 7:   //  OpenLibrary.Views.MainPage
                 userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_7_MainPage;
                 userType.SetIsLocalType();

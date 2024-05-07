@@ -22,7 +22,7 @@ namespace OpenLibrary
 			rootFrame.NavigationFailed += OnNavigationFailed;
 			// Navigate to the first page, configuring the new page
 			// by passing required information as a navigation parameter
-			rootFrame.Navigate(typeof(MainPage), args.Arguments);
+			rootFrame.Navigate(typeof(Views.MainPage), args.Arguments);
 
 			// Place the frame in the current Window
 			m_window.Content = rootFrame;

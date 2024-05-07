@@ -229,12 +229,12 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
             _typeNameTable[3] = "Boolean";
-            _typeNameTable[4] = "OpenLibrary.MainWindow";
-            _typeNameTable[5] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[6] = "OpenLibrary.Details";
-            _typeNameTable[7] = "Microsoft.UI.Xaml.Controls.Page";
-            _typeNameTable[8] = "Microsoft.UI.Xaml.Controls.UserControl";
-            _typeNameTable[9] = "OpenLibrary.MainPage";
+            _typeNameTable[4] = "OpenLibrary.Views.Details";
+            _typeNameTable[5] = "Microsoft.UI.Xaml.Controls.Page";
+            _typeNameTable[6] = "Microsoft.UI.Xaml.Controls.UserControl";
+            _typeNameTable[7] = "OpenLibrary.Views.MainPage";
+            _typeNameTable[8] = "OpenLibrary.MainWindow";
+            _typeNameTable[9] = "Microsoft.UI.Xaml.Window";
             _typeNameTable[10] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
             _typeNameTable[11] = "Microsoft.UI.Xaml.DependencyObject";
             _typeNameTable[12] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
@@ -245,12 +245,12 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
             _typeTable[3] = typeof(global::System.Boolean);
-            _typeTable[4] = typeof(global::OpenLibrary.MainWindow);
-            _typeTable[5] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[6] = typeof(global::OpenLibrary.Details);
-            _typeTable[7] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
-            _typeTable[8] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
-            _typeTable[9] = typeof(global::OpenLibrary.MainPage);
+            _typeTable[4] = typeof(global::OpenLibrary.Views.Details);
+            _typeTable[5] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
+            _typeTable[6] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
+            _typeTable[7] = typeof(global::OpenLibrary.Views.MainPage);
+            _typeTable[8] = typeof(global::OpenLibrary.MainWindow);
+            _typeTable[9] = typeof(global::Microsoft.UI.Xaml.Window);
             _typeTable[10] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
             _typeTable[11] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
             _typeTable[12] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
@@ -290,9 +290,9 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
         }
 
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
-        private object Activate_4_MainWindow() { return new global::OpenLibrary.MainWindow(); }
-        private object Activate_6_Details() { return new global::OpenLibrary.Details(); }
-        private object Activate_9_MainPage() { return new global::OpenLibrary.MainPage(); }
+        private object Activate_4_Details() { return new global::OpenLibrary.Views.Details(); }
+        private object Activate_7_MainPage() { return new global::OpenLibrary.Views.MainPage(); }
+        private object Activate_8_MainWindow() { return new global::OpenLibrary.MainWindow(); }
         private object Activate_10_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
@@ -338,37 +338,37 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
                 xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 4:   //  OpenLibrary.MainWindow
+            case 4:   //  OpenLibrary.Views.Details
+                userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_Details;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Microsoft.UI.Xaml.Controls.Page
+                xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  Microsoft.UI.Xaml.Controls.UserControl
+                xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 7:   //  OpenLibrary.Views.MainPage
+                userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  OpenLibrary.MainWindow
                 userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_4_MainWindow;
+                userType.Activator = Activate_8_MainWindow;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  Microsoft.UI.Xaml.Window
+            case 9:   //  Microsoft.UI.Xaml.Window
                 xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 6:   //  OpenLibrary.Details
-                userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_Details;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 7:   //  Microsoft.UI.Xaml.Controls.Page
-                xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 8:   //  Microsoft.UI.Xaml.Controls.UserControl
-                xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 9:   //  OpenLibrary.MainPage
-                userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_MainPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
                 break;
 
             case 10:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
