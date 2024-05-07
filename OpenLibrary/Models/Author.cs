@@ -46,7 +46,6 @@ namespace OpenLibrary.Models
 						{
 							Link = links[0]["url"]?.ToString();
 						}
-						//TODO
 
 					}
 					else

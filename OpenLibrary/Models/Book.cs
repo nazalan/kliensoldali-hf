@@ -9,7 +9,6 @@ namespace OpenLibrary.Models
 	internal class Book
 	{
 		public string Key { get; set; }
-		public string ISBN { get; set; }
 		public string Title { get; set; }
 		public List<Author> Authors { get; set; }
 		public string AuthorNamesAsString
@@ -28,7 +27,6 @@ namespace OpenLibrary.Models
 		public string FirstPublishDate { get; set; }
 		public List<string> Subjects { get; set; }
 		public string SubjectsAsString => string.Join(", ", Subjects);
-		public List<Edition> Editions { get; set; }
 		public string CoverId {  get; set; }
 		public string CoverImageUrl { get; set; }
 	}

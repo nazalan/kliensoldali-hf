@@ -15,7 +15,6 @@ namespace OpenLibrary
 		public MainWindow()
 		{
 			this.InitializeComponent();
-			//rootFrame.Navigate(typeof(Home));
 		}
 	}
 
