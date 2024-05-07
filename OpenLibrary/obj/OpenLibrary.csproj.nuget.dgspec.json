@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\work\\Kiltech\\hf\\kliensoldali-hf\\OpenLibrary\\OpenLibrary.csproj": {}
+    "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\OpenLibrary.csproj": {}
   },
   "projects": {
-    "C:\\work\\Kiltech\\hf\\kliensoldali-hf\\OpenLibrary\\OpenLibrary.csproj": {
+    "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\OpenLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\work\\Kiltech\\hf\\kliensoldali-hf\\OpenLibrary\\OpenLibrary.csproj",
+        "projectUniqueName": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\OpenLibrary.csproj",
         "projectName": "OpenLibrary",
-        "projectPath": "C:\\work\\Kiltech\\hf\\kliensoldali-hf\\OpenLibrary\\OpenLibrary.csproj",
+        "projectPath": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\OpenLibrary.csproj",
         "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
-        "outputPath": "C:\\work\\Kiltech\\hf\\kliensoldali-hf\\OpenLibrary\\obj\\",
+        "outputPath": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -52,6 +52,14 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.2, )"
+            },
+            "MaterialDesignInXamlToolkitAddOns": {
+              "target": "Package",
+              "version": "[0.0.6, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Microsoft.AspNet.WebApi.Client": {
               "target": "Package",

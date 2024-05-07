@@ -112,9 +112,8 @@ namespace OpenLibrary.Services
 		{
 			List<Book> results = new List<Book>();
 
-			string apiUrl = $"https://openlibrary.org/search.json?limit=20&q={searchQuery}&fields=key,title,cover_i,author_name,editions,editions.key,editions.title,editions.ebook_access,editions.language,first_publish_year&.json";
+			string apiUrl = $"https://openlibrary.org/search.json?limit=40&q={searchQuery}&fields=key,title,cover_i,author_name,editions,editions.key,editions.title,editions.ebook_access,editions.language,first_publish_year&.json";
 			System.Diagnostics.Debug.WriteLine(apiUrl);
-			//string apiUrl = $"https://openlibrary.org/search.json?q=";
 
 			using (HttpClient client = new HttpClient())
 			{

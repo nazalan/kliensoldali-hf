@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpenLibrary.Models
 {
-	internal class Book
+	public class Book
 	{
 		public string Key { get; set; }
 		public string Title { get; set; }

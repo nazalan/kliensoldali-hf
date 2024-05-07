@@ -1,0 +1,70 @@
+<Page
+    x:Class="OpenLibrary.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OpenLibrary"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Search Card -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Border BorderThickness="1" BorderBrush="LightGray" CornerRadius="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <TextBox x:Name="searchTextBox" PlaceholderText="Search by keyword" Margin="10" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
+                        <TextBox x:Name="searchAuthor" PlaceholderText="Search by author" Margin="10" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
+                        <TextBox x:Name="searchLanguage" PlaceholderText="Search by language" Margin="10" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
+                    </StackPanel>
+                    <Button Grid.Column="1" Content="Search" Click="SearchButton_Click" Margin="10" Background="#0078D7" Foreground="White"/>
+                </Grid>
+            </Border>
+        </StackPanel>
+
+        <!-- Results ListView -->
+        <ListView x:Name="resultsListView" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#F5F5F5" BorderThickness="0">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical" Margin="10" Width="300" Height="200">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Width="100" Height="150" Source="{Binding CoverImageUrl}" Grid.Column="0"/>
+                            <StackPanel Margin="10" Grid.Column="1">
+                                <TextBlock Text="{Binding Title}" TextWrapping="Wrap" FontSize="20"/>
+                                <TextBlock FontSize="16">
+                                    <Run Text="by"/>
+                                    <Run Text="{Binding AuthorNamesAsString}"/>
+                                </TextBlock>
+                                <TextBlock FontSize="13">
+                                    <Run Text="First published in "/>
+                                    <Run Text="{Binding FirstPublishYear}"/>
+                                </TextBlock>
+                                <Button x:Name="button" VerticalAlignment="Bottom" Click="HyperlinkButton_Click" Content="Details" Tag="{Binding Key}" Background="#0078D7" Foreground="White"/>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

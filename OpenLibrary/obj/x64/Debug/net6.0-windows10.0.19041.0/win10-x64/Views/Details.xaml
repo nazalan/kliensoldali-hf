@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="OpenLibrary.Views.Details"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OpenLibrary"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Frame x:ConnectionId='2' x:Name="bookFrame" Grid.Row="0" HorizontalAlignment="Left"/>
+            <!-- Visszafelé nyíl gomb -->
+            <Button x:ConnectionId='3' Grid.Row="0" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Left"                              >
+                <SymbolIcon Symbol="Back"/>
+            </Button>
+
+            <!-- Egy Popup elem a kép megjelenítéséhez -->
+            <Popup x:ConnectionId='4' x:Name="imagePopup">
+                <Grid>
+                    <Border Background="White" Opacity="0.8"/>
+                    <!-- Háttér maszkolása -->
+                    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Image x:ConnectionId='8' x:Name="image" Width="400" Height="600" Source="{Binding CoverImageUrl}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <!-- X ikon -->
+                    <Button x:ConnectionId='7'                           HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10,10,0">
+                        <SymbolIcon Symbol="Cancel"/>
+                    </Button>
+                </Grid>
+            </Popup>
+
+
+            <!-- Tartalom -->
+            <StackPanel Grid.Row="1" Margin="10" MaxWidth="800">
+                <StackPanel HorizontalAlignment="Center">
+                    <!-- Egy gomb a popup megjelenítéséhez -->
+                    <Button x:ConnectionId='6' Margin="10"                            BorderThickness="0" Background="Transparent">
+                        <Image Width="200" Height="300" Source="{Binding CoverImageUrl}"/>
+                    </Button>
+
+                </StackPanel>
+                <StackPanel Margin="20,0,0,0" HorizontalAlignment="Center">
+                    <TextBlock Text="{Binding Title}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,5,0,10"/>
+                    <TextBlock Text="Author:" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left"/>
+                    <StackPanel x:ConnectionId='5' x:Name="authorPanel" HorizontalAlignment="Left"/>
+                    <TextBlock Text="First Publish Date:" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left"/>
+                    <TextBlock FontSize="13" Text="{Binding FirstPublishDate}" Margin="0,0,0,10" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Description:" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left"/>
+                    <TextBlock FontSize="13" Text="{Binding Description}" TextWrapping="Wrap" Margin="0,0,0,10" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Subjects:" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left"/>
+                    <TextBlock FontSize="13" Text="{Binding SubjectsAsString}" TextWrapping="Wrap" Margin="0,0,0,10" HorizontalAlignment="Left"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>
+

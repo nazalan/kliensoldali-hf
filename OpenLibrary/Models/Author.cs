@@ -8,7 +8,7 @@ using System.Net.Http;
 
 namespace OpenLibrary.Models
 {
-	internal class Author
+	public class Author
 	{
 		public string Key { get; set; }
 		public string Name { get; set; }
