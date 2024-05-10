@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-05-10T12:54:39.542</Modified>
+      <Modified>2024-05-10T13:18:43.827</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\OpenLibrary.dll">
       <PackagePath>OpenLibrary.dll</PackagePath>
-      <Modified>2024-05-10T12:54:38.301</Modified>
+      <Modified>2024-05-10T13:18:42.284</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>OpenLibrary.exe</PackagePath>
-      <Modified>2024-05-10T12:54:38.309</Modified>
+      <Modified>2024-05-10T13:18:42.359</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\OpenLibrary.deps.json">
       <PackagePath>OpenLibrary.deps.json</PackagePath>

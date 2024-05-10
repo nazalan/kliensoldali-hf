@@ -1,22 +1,42 @@
 ﻿namespace OpenLibrary.Models
 {
-	// Model class representing an author
+	/// <summary>
+	/// Model class representing an author.
+	/// </summary>
 	public class Author
 	{
-		// Unique key of the author
+		/// <summary>
+		/// Unique key of the author.
+		/// </summary>
 		public string Key { get; set; }
-		// Name of the author
+
+		/// <summary>
+		/// Name of the author.
+		/// </summary>
 		public string Name { get; set; }
-		// Link to more information about the author
+
+		/// <summary>
+		/// Link to more information about the author.
+		/// </summary>
 		public string Link { get; set; }
-		// Birth date of the author
+
+		/// <summary>
+		/// Birth date of the author.
+		/// </summary>
 		public int BirthDate { get; set; }
-		// Default constructor
+
+		/// <summary>
+		/// Default constructor.
+		/// </summary>
 		public Author()
 		{
 
 		}
-		// Constructor with name parameter
+
+		/// <summary>
+		/// Constructor with name parameter.
+		/// </summary>
+		/// <param name="name">The name of the author.</param>
 		public Author(string name)
 		{
 			Name = name;

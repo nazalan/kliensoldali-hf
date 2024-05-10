@@ -10,6 +10,9 @@ using Windows.Storage;
 
 namespace OpenLibrary.ViewModels
 {
+	/// <summary>
+	/// ViewModel class responsible for managing the MainPage.
+	/// </summary>
 	public class MainPageViewModel : ObservableObject
 	{
 		// Commands for loading and searching books
@@ -18,6 +21,9 @@ namespace OpenLibrary.ViewModels
 
 		// Property for storing the list of books
 		private List<Book> books;
+		/// <summary>
+		/// Gets or sets the list of books.
+		/// </summary>
 		public List<Book> Books
 		{
 			get => books;
@@ -77,10 +83,24 @@ namespace OpenLibrary.ViewModels
 	}
 
 	// Class to hold search parameters
+	/// <summary>
+	/// Class to hold search parameters.
+	/// </summary>
 	public class SearchParameters
 	{
-		public string SearchText { get; set; } // Text to search for
-		public string SearchAuthor { get; set; } // Author to search for
-		public string SearchLanguage { get; set; } // Language to search for
+		/// <summary>
+		/// Gets or sets the text to search for.
+		/// </summary>
+		public string SearchText { get; set; }
+
+		/// <summary>
+		/// Gets or sets the author to search for.
+		/// </summary>
+		public string SearchAuthor { get; set; }
+
+		/// <summary>
+		/// Gets or sets the language to search for.
+		/// </summary>
+		public string SearchLanguage { get; set; }
 	}
 }

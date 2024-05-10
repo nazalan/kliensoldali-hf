@@ -8,7 +8,9 @@ using System;
 // Namespace for the Details page
 namespace OpenLibrary.Views
 {
-	// Details page class declaration
+	/// <summary>
+	/// Details page class declaration.
+	/// </summary>
 	public sealed partial class Details : Page
 	{
 		// ViewModel instance for the Details page
@@ -21,7 +23,11 @@ namespace OpenLibrary.Views
 			_viewModel = new DetailsViewModel();
 		}
 
-		// Method called when the page is navigated to
+		/// <summary>
+		/// Invoked when the Page is loaded and becomes the current source of a parent Frame.
+		/// </summary>
+		/// <param name="e">Event data that describes how this Page was reached. The Parameter
+		/// property provides the group to be displayed.</param>
 		protected override async void OnNavigatedTo(NavigationEventArgs e)
 		{
 			base.OnNavigatedTo(e);
@@ -35,7 +41,9 @@ namespace OpenLibrary.Views
 			}
 		}
 
-		// Event handler for clicking the image button
+		/// <summary>
+		/// Event handler for clicking the image button.
+		/// </summary>
 		private void Image_Button_Click(object sender, RoutedEventArgs e)
 		{
 			// Update the cover image URL to use a larger version
@@ -46,14 +54,18 @@ namespace OpenLibrary.Views
 			imagePopup.IsOpen = true;
 		}
 
-		// Event handler for clicking the close button in the image popup
+		/// <summary>
+		/// Event handler for clicking the close button in the image popup.
+		/// </summary>
 		private void CloseButton_Click(object sender, RoutedEventArgs e)
 		{
 			// Close the image popup
 			imagePopup.IsOpen = false;
 		}
 
-		// Event handler for clicking the hyperlink button (back navigation)
+		/// <summary>
+		/// Event handler for clicking the hyperlink button (back navigation).
+		/// </summary>
 		private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
 		{
 			// Navigate back to the MainPage

@@ -7,12 +7,18 @@ using System.Threading.Tasks;
 
 namespace OpenLibrary.Services
 {
-	// Service class responsible for interacting with the Open Library API
+	/// <summary>
+	/// Service class responsible for interacting with the Open Library API.
+	/// </summary>
 	class LibraryService
 	{
 		public LibraryService() { }
 
-		// Method to search for a book by its unique key asynchronously
+		/// <summary>
+		/// Method to search for a book by its unique key asynchronously.
+		/// </summary>
+		/// <param name="uri">The URI of the book.</param>
+		/// <returns>The Book object representing the searched book.</returns>
 		public async Task<Book> SearchWorkAsyncByKey(string uri)
 		{
 			Book results;
@@ -114,7 +120,11 @@ namespace OpenLibrary.Services
 			return results;
 		}
 
-		// Method to search for books based on a search query asynchronously
+		/// <summary>
+		/// Method to search for books based on a search query asynchronously.
+		/// </summary>
+		/// <param name="searchQuery">The search query.</param>
+		/// <returns>A list of Book objects representing the search results.</returns>
 		public async Task<List<Book>> SearchBooksAsync(string searchQuery)
 		{
 			List<Book> results = new List<Book>();
@@ -215,7 +225,11 @@ namespace OpenLibrary.Services
 			return results;
 		}
 
-		// Method to search for authors asynchronously by key
+		/// <summary>
+		/// Method to search for authors asynchronously by key.
+		/// </summary>
+		/// <param name="uri">The URI of the author.</param>
+		/// <returns>The Author object representing the searched author.</returns>
 		public async Task<Author> SearchAuthorsAsyncByKey(string uri)
 		{
 			Author author = new Author();

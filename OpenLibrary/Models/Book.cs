@@ -3,16 +3,29 @@ using System.Linq;
 
 namespace OpenLibrary.Models
 {
-	// Model class representing a book
+	/// <summary>
+	/// Model class representing a book.
+	/// </summary>
 	public class Book
 	{
-		// Unique key of the book
+		/// <summary>
+		/// Unique key of the book.
+		/// </summary>
 		public string Key { get; set; }
-		// Title of the book
+
+		/// <summary>
+		/// Title of the book.
+		/// </summary>
 		public string Title { get; set; }
-		// List of authors of the book
+
+		/// <summary>
+		/// List of authors of the book.
+		/// </summary>
 		public List<Author> Authors { get; set; }
-		// String representation of author names
+
+		/// <summary>
+		/// String representation of author names.
+		/// </summary>
 		public string AuthorNamesAsString
 		{
 			get
@@ -26,19 +39,40 @@ namespace OpenLibrary.Models
 				return string.Join(", ", authorNames);
 			}
 		}
-		// Description of the book
+
+		/// <summary>
+		/// Description of the book.
+		/// </summary>
 		public string Description { get; set; }
-		// Year of the first publication of the book
+
+		/// <summary>
+		/// Year of the first publication of the book.
+		/// </summary>
 		public int FirstPublishYear { get; set; }
-		// Date of the first publication of the book
+
+		/// <summary>
+		/// Date of the first publication of the book.
+		/// </summary>
 		public string FirstPublishDate { get; set; }
-		// List of subjects related to the book
+
+		/// <summary>
+		/// List of subjects related to the book.
+		/// </summary>
 		public List<string> Subjects { get; set; }
-		// String representation of subjects
+
+		/// <summary>
+		/// String representation of subjects.
+		/// </summary>
 		public string SubjectsAsString => string.Join(", ", Subjects);
-		// ID of the book cover
+
+		/// <summary>
+		/// ID of the book cover.
+		/// </summary>
 		public string CoverId { get; set; }
-		// URL of the book cover image
+
+		/// <summary>
+		/// URL of the book cover image.
+		/// </summary>
 		public string CoverImageUrl { get; set; }
 	}
 }

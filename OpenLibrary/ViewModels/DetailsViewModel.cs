@@ -9,17 +9,28 @@ using System.Threading.Tasks;
 
 namespace OpenLibrary.ViewModels
 {
+	/// <summary>
+	/// ViewModel class responsible for managing book details.
+	/// </summary>
 	public class DetailsViewModel : ObservableObject
 	{
 		// Property for storing the book details
 		private Book _book;
+		/// <summary>
+		/// Gets or sets the Book object representing the book details.
+		/// </summary>
 		public Book Book
 		{
 			get => _book;
 			set => SetProperty(ref _book, value);
 		}
 
-		// Method to asynchronously load book details
+		/// <summary>
+		/// Method to asynchronously load book details.
+		/// </summary>
+		/// <param name="uri">The URI of the book.</param>
+		/// <param name="panel">The StackPanel to load author links into.</param>
+		/// <returns>A Task representing the asynchronous operation.</returns>
 		public async Task LoadBookAsync(string uri, StackPanel panel)
 		{
 			try
@@ -37,7 +48,11 @@ namespace OpenLibrary.ViewModels
 			}
 		}
 
-		// Method to load author links into the StackPanel
+		/// <summary>
+		/// Method to load author links into the StackPanel.
+		/// </summary>
+		/// <param name="panel">The StackPanel to load author links into.</param>
+		/// <param name="authors">The list of authors.</param>
 		private void LoadAuthorLinks(StackPanel panel, List<Author> authors)
 		{
 			foreach (var author in authors)

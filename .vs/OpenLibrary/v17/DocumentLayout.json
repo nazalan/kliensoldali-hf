@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|c:\\work\\kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\openlibrary\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|solutionrelative:openlibrary\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|c:\\work\\kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\openlibrary\\views\\details.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|solutionrelative:openlibrary\\views\\details.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|c:\\work\\kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\openlibrary\\viewmodels\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|solutionrelative:openlibrary\\viewmodels\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|c:\\work\\kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\openlibrary\\viewmodels\\detailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|solutionrelative:openlibrary\\viewmodels\\detailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|c:\\work\\kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\openlibrary\\services\\libraryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|solutionrelative:openlibrary\\services\\libraryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|c:\\work\\kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\openlibrary\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|solutionrelative:openlibrary\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|c:\\work\\kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\openlibrary\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|solutionrelative:openlibrary\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|c:\\work\\kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\openlibrary\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A2571788-E006-4C7E-A44C-3B01CE47326C}|OpenLibrary\\OpenLibrary.csproj|solutionrelative:openlibrary\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
@@ -41,6 +69,91 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\Views\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "OpenLibrary\\Views\\MainPage.xaml.cs",
+              "ToolTip": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\Views\\MainPage.xaml.cs",
+              "RelativeToolTip": "OpenLibrary\\Views\\MainPage.xaml.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwCEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:17:16.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.xaml.cs",
+              "DocumentMoniker": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\Views\\Details.xaml.cs",
+              "RelativeDocumentMoniker": "OpenLibrary\\Views\\Details.xaml.cs",
+              "ToolTip": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\Views\\Details.xaml.cs",
+              "RelativeToolTip": "OpenLibrary\\Views\\Details.xaml.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAqwEAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:16:21.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainPageViewModel.cs",
+              "DocumentMoniker": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\ViewModels\\MainPageViewModel.cs",
+              "RelativeDocumentMoniker": "OpenLibrary\\ViewModels\\MainPageViewModel.cs",
+              "ToolTip": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\ViewModels\\MainPageViewModel.cs",
+              "RelativeToolTip": "OpenLibrary\\ViewModels\\MainPageViewModel.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAuwGoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:15:47.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DetailsViewModel.cs",
+              "DocumentMoniker": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\ViewModels\\DetailsViewModel.cs",
+              "RelativeDocumentMoniker": "OpenLibrary\\ViewModels\\DetailsViewModel.cs",
+              "ToolTip": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\ViewModels\\DetailsViewModel.cs",
+              "RelativeToolTip": "OpenLibrary\\ViewModels\\DetailsViewModel.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAqwFYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:15:16.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LibraryService.cs",
+              "DocumentMoniker": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\Services\\LibraryService.cs",
+              "RelativeDocumentMoniker": "OpenLibrary\\Services\\LibraryService.cs",
+              "ToolTip": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\Services\\LibraryService.cs",
+              "RelativeToolTip": "OpenLibrary\\Services\\LibraryService.cs",
+              "ViewState": "AQIAANQAAAAAAAAAAAAiwA8BAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:14:07.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "OpenLibrary\\Models\\Book.cs",
+              "ToolTip": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\Models\\Book.cs",
+              "RelativeToolTip": "OpenLibrary\\Models\\Book.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAQwE4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:13:40.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Author.cs",
+              "DocumentMoniker": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\Models\\Author.cs",
+              "RelativeDocumentMoniker": "OpenLibrary\\Models\\Author.cs",
+              "ToolTip": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\Models\\Author.cs",
+              "RelativeToolTip": "OpenLibrary\\Models\\Author.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAA5wC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:12:57.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\Views\\MainPage.xaml",
               "RelativeDocumentMoniker": "OpenLibrary\\Views\\MainPage.xaml",
@@ -48,8 +161,7 @@
               "RelativeToolTip": "OpenLibrary\\Views\\MainPage.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-10T09:45:28.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T09:45:28.541Z"
             }
           ]
         }
