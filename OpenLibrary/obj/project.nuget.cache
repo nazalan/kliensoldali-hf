@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vuYrkQHeQvqEwRIEwPdjHVEPExMJQO1Y7lgQOPeiP9nsCwXERR2AR/RBSOT2KeutuQxCrrA52q3ZZuEIE1I58g==",
+  "dgSpecHash": "qAlvearKJ3qRUeGKGlUiChPhb1FUgACvJ1yZ35byHL52Qjhj49Jx2Dbb9pr0RINLg8lXb+D9gtMfoNCWT/iB2g==",
   "success": true,
   "projectFilePath": "C:\\work\\Kiltech\\hf\\kliensoldalihh2\\kliensoldali-hf\\OpenLibrary\\OpenLibrary.csproj",
   "expectedPackageFiles": [
@@ -29,16 +29,22 @@
     "C:\\Users\\ThinkPad\\.nuget\\packages\\system.private.uri\\4.3.0\\system.private.uri.4.3.0.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.27\\microsoft.netcore.app.runtime.win-x86.6.0.27.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.29\\microsoft.netcore.app.runtime.win-x86.6.0.29.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.31\\microsoft.windows.sdk.net.ref.10.0.19041.31.nupkg.sha512",
-    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.27\\microsoft.aspnetcore.app.runtime.win-x86.6.0.27.nupkg.sha512",
-    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\6.0.27\\microsoft.netcore.app.runtime.win-arm64.6.0.27.nupkg.sha512",
-    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.27\\microsoft.aspnetcore.app.runtime.win-x64.6.0.27.nupkg.sha512",
-    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-arm64\\6.0.27\\microsoft.windowsdesktop.app.runtime.win-arm64.6.0.27.nupkg.sha512",
-    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.27\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.27.nupkg.sha512",
-    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm64\\6.0.27\\microsoft.aspnetcore.app.runtime.win-arm64.6.0.27.nupkg.sha512",
-    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.27\\microsoft.netcore.app.runtime.win-x64.6.0.27.nupkg.sha512",
-    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\6.0.27\\microsoft.windowsdesktop.app.runtime.win-x86.6.0.27.nupkg.sha512"
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.29\\microsoft.aspnetcore.app.runtime.win-x86.6.0.29.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.netcore.app.host.win-arm64\\6.0.29\\microsoft.netcore.app.host.win-arm64.6.0.29.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\6.0.29\\microsoft.netcore.app.runtime.win-arm64.6.0.29.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.29\\microsoft.aspnetcore.app.runtime.win-x64.6.0.29.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-arm64\\6.0.29\\microsoft.windowsdesktop.app.runtime.win-arm64.6.0.29.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.29\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.29.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.29\\microsoft.netcore.app.host.win-x64.6.0.29.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm64\\6.0.29\\microsoft.aspnetcore.app.runtime.win-arm64.6.0.29.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.29\\microsoft.netcore.app.runtime.win-x64.6.0.29.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\6.0.29\\microsoft.windowsdesktop.app.runtime.win-x86.6.0.29.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.netcore.app.host.win-x86\\6.0.29\\microsoft.netcore.app.host.win-x86.6.0.29.nupkg.sha512"
   ],
   "logs": []
 }

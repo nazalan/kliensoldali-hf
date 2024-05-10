@@ -21,38 +21,33 @@ using OpenLibrary.Services;
 using OpenLibrary.Models;
 using OpenLibrary.ViewModels;
 
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
-
+// Namespace for the MainPage
 namespace OpenLibrary.Views
 {
-	/// <summary>
-	/// An empty page that can be used on its own or navigated to within a Frame.
-	/// </summary>
 	public sealed partial class MainPage : Page
 	{
-		private MainPageViewModel _viewModel;
-		
+		// Constructor for the MainPage
 		public MainPage()
 		{
 			this.InitializeComponent();
-			_viewModel = new MainPageViewModel();
-			_viewModel.LoadQuery();
 		}
+
+		// Event handler for clicking the hyperlink button to view book details
 		private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
 		{
+			// Get the button that raised the event
 			Button button = (Button)sender;
+			// Get the unique key of the book from the button's Tag property
 			string key = button.Tag.ToString();
+			// Navigate to the Details page passing the key as parameter
 			Frame.Navigate(typeof(Details), key);
 		}
-		private async void SearchButton_Click(object sender, RoutedEventArgs e)
+
+		// Event handler for the Page's Loaded event
+		private void Page_Loaded(object sender, RoutedEventArgs e)
 		{
-			resultsListView.ItemsSource = await _viewModel.Search(searchTextBox.Text, searchAuthor.Text, searchLanguage.Text);
-		}
-		protected override async void OnNavigatedTo(NavigationEventArgs e)
-		{
-			resultsListView.ItemsSource = await _viewModel.Load() ;
-			base.OnNavigatedTo(e);
+			// Execute the LoadCommand of the ViewModel when the page is loaded
+			ViewModel.LoadCommand.Execute(null);
 		}
 	}
 }

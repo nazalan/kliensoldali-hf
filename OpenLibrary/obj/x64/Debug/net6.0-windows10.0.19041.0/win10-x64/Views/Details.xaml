@@ -1,4 +1,5 @@
-﻿<Page
+﻿<!-- Define the page class and XML namespaces -->
+<Page
     x:Class="OpenLibrary.Views.Details"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -8,51 +9,65 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <!-- Enable vertical scrolling -->
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <Grid>
+            <!-- Define grid rows -->
             <Grid.RowDefinitions>
+                <!-- Auto-sized row for the book frame -->
                 <RowDefinition Height="Auto"/>
+                <!-- Row that takes the remaining space for other content -->
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+            <!-- Frame to display book content -->
             <Frame x:ConnectionId='2' x:Name="bookFrame" Grid.Row="0" HorizontalAlignment="Left"/>
-            <!-- Visszafelé nyíl gomb -->
+            <!-- Button for navigation back -->
             <Button x:ConnectionId='3' Grid.Row="0" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Left"                              >
+                <!-- Icon for back navigation -->
                 <SymbolIcon Symbol="Back"/>
             </Button>
 
-            <!-- Egy Popup elem a kép megjelenítéséhez -->
+            <!-- Popup for displaying book image -->
             <Popup x:ConnectionId='4' x:Name="imagePopup">
                 <Grid>
+                    <!-- Semi-transparent background -->
                     <Border Background="White" Opacity="0.8"/>
-                    <!-- Háttér maszkolása -->
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <!-- Image control to display book cover -->
                         <Image x:ConnectionId='8' x:Name="image" Width="400" Height="600" Source="{Binding CoverImageUrl}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
-                    <!-- X ikon -->
+                    <!-- Button to close the popup -->
                     <Button x:ConnectionId='7'                           HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10,10,0">
+                        <!-- Icon for cancellation -->
                         <SymbolIcon Symbol="Cancel"/>
                     </Button>
                 </Grid>
             </Popup>
 
-
-            <!-- Tartalom -->
+            <!-- StackPanel for displaying book details -->
             <StackPanel Grid.Row="1" Margin="10" MaxWidth="800">
+                <!-- StackPanel for displaying book cover -->
                 <StackPanel HorizontalAlignment="Center">
-                    <!-- Egy gomb a popup megjelenítéséhez -->
+                    <!-- Button to show book cover in popup -->
                     <Button x:ConnectionId='6' Margin="10"                            BorderThickness="0" Background="Transparent">
+                        <!-- Image control for book cover -->
                         <Image Width="200" Height="300" Source="{Binding CoverImageUrl}"/>
                     </Button>
-
                 </StackPanel>
+                <!-- StackPanel for other book details -->
                 <StackPanel Margin="20,0,0,0" HorizontalAlignment="Center">
+                    <!-- Title of the book -->
                     <TextBlock Text="{Binding Title}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,5,0,10"/>
+                    <!-- Author information -->
                     <TextBlock Text="Author:" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left"/>
                     <StackPanel x:ConnectionId='5' x:Name="authorPanel" HorizontalAlignment="Left"/>
+                    <!-- First publish date of the book -->
                     <TextBlock Text="First Publish Date:" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left"/>
                     <TextBlock FontSize="13" Text="{Binding FirstPublishDate}" Margin="0,0,0,10" HorizontalAlignment="Left"/>
+                    <!-- Description of the book -->
                     <TextBlock Text="Description:" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left"/>
                     <TextBlock FontSize="13" Text="{Binding Description}" TextWrapping="Wrap" Margin="0,0,0,10" HorizontalAlignment="Left"/>
+                    <!-- Subjects covered in the book -->
                     <TextBlock Text="Subjects:" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left"/>
                     <TextBlock FontSize="13" Text="{Binding SubjectsAsString}" TextWrapping="Wrap" Margin="0,0,0,10" HorizontalAlignment="Left"/>
                 </StackPanel>

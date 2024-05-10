@@ -15,6 +15,7 @@ namespace OpenLibrary.ViewModels
 {
 	public class DetailsViewModel : ObservableObject
 	{
+		// Property for storing the book details
 		private Book _book;
 		public Book Book
 		{
@@ -22,26 +23,33 @@ namespace OpenLibrary.ViewModels
 			set => SetProperty(ref _book, value);
 		}
 
+		// Method to asynchronously load book details
 		public async Task LoadBookAsync(string uri, StackPanel panel)
 		{
 			try
 			{
 				LibraryService service = new LibraryService();
+				// Retrieve book details based on the provided URI
 				Book = await service.SearchWorkAsyncByKey(uri);
-				LoadAuthorLinks(panel , Book.Authors);
+				// Load author links into the provided StackPanel
+				LoadAuthorLinks(panel, Book.Authors);
 			}
 			catch (Exception ex)
 			{
-				throw new Exception("Hiba történt: " + ex.Message + "   " + uri);
+				// Throw an exception if an error occurs during loading
+				throw new Exception("An error occurred: " + ex.Message + "   " + uri);
 			}
 		}
 
+		// Method to load author links into the StackPanel
 		private void LoadAuthorLinks(StackPanel panel, List<Author> authors)
 		{
 			foreach (var author in authors)
 			{
+				// Check if the author has a link
 				if (!string.IsNullOrEmpty(author.Link))
 				{
+					// Create a HyperlinkButton for the author with a link
 					HyperlinkButton hyperlinkButton = new HyperlinkButton
 					{
 						Content = author.Name,
@@ -52,6 +60,7 @@ namespace OpenLibrary.ViewModels
 				}
 				else
 				{
+					// Create a TextBlock for the author without a link
 					TextBlock textBlock = new TextBlock
 					{
 						Text = author.Name,

@@ -543,7 +543,6 @@ C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net
 C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\hostfxr.dll
 C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\hostpolicy.dll
 C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\mscordaccore.dll
-C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_6.0.2724.6912.dll
 C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\mscordbi.dll
 C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\mscorrc.dll
 C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\msquic.dll
@@ -882,3 +881,4 @@ C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net
 C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\zh-Hant\UIAutomationTypes.resources.dll
 C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\zh-Hant\WindowsBase.resources.dll
 C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\zh-Hant\WindowsFormsIntegration.resources.dll
+C:\work\Kiltech\hf\kliensoldalihh2\kliensoldali-hf\OpenLibrary\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_6.0.2924.17105.dll
