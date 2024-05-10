@@ -2,19 +2,11 @@
 using CommunityToolkit.Mvvm.Input;
 using OpenLibrary.Models;
 using OpenLibrary.Services;
-using OpenLibrary.Views;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.Metrics;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using System.Windows.Navigation;
-using System.Xml.Schema;
 using Windows.Storage;
-using static System.Reflection.Metadata.BlobBuilder;
 
 namespace OpenLibrary.ViewModels
 {

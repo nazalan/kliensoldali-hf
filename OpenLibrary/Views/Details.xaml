@@ -1,6 +1,7 @@
 <!-- Define the page class and XML namespaces -->
 <Page
     x:Class="OpenLibrary.Views.Details"
+    xmlns:viewModels="using:OpenLibrary.ViewModels"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:OpenLibrary"
@@ -9,6 +10,11 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <!-- Set the DataContext for the page -->
+    <Page.DataContext>
+        <viewModels:DetailsViewModel x:Name="ViewModel"/>
+    </Page.DataContext>
+    
     <!-- Enable vertical scrolling -->
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <Grid>
@@ -55,7 +61,7 @@
                     </Button>
                 </StackPanel>
                 <!-- StackPanel for other book details -->
-                <StackPanel Margin="20,0,0,0" HorizontalAlignment="Center">
+                <StackPanel Margin="20,0,0,0" HorizontalAlignment="Left">
                     <!-- Title of the book -->
                     <TextBlock Text="{Binding Title}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,5,0,10"/>
                     <!-- Author information -->

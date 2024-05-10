@@ -1,17 +1,9 @@
-using CommunityToolkit.Mvvm.DependencyInjection;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media.Imaging;
 using Microsoft.UI.Xaml.Navigation;
-using Newtonsoft.Json.Linq;
-using OpenLibrary.Models;
-using OpenLibrary.Services;
 using OpenLibrary.ViewModels;
-using OpenLibrary.Views;
 using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Threading.Tasks;
 
 // Namespace for the Details page
 namespace OpenLibrary.Views

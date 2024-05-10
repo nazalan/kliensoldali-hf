@@ -224,57 +224,59 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[24];
+            _typeNameTable = new string[25];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
             _typeNameTable[3] = "Boolean";
             _typeNameTable[4] = "OpenLibrary.MainWindow";
             _typeNameTable[5] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[6] = "OpenLibrary.Views.Details";
-            _typeNameTable[7] = "Microsoft.UI.Xaml.Controls.Page";
-            _typeNameTable[8] = "Microsoft.UI.Xaml.Controls.UserControl";
-            _typeNameTable[9] = "OpenLibrary.ViewModels.MainPageViewModel";
-            _typeNameTable[10] = "CommunityToolkit.Mvvm.ComponentModel.ObservableObject";
-            _typeNameTable[11] = "System.Collections.Generic.List`1<OpenLibrary.Models.Book>";
-            _typeNameTable[12] = "OpenLibrary.Models.Book";
-            _typeNameTable[13] = "String";
-            _typeNameTable[14] = "System.Collections.Generic.List`1<OpenLibrary.Models.Author>";
-            _typeNameTable[15] = "OpenLibrary.Models.Author";
-            _typeNameTable[16] = "Int32";
-            _typeNameTable[17] = "System.Collections.Generic.List`1<String>";
-            _typeNameTable[18] = "System.Windows.Input.ICommand";
-            _typeNameTable[19] = "OpenLibrary.ViewModels.SearchParameters";
-            _typeNameTable[20] = "OpenLibrary.Views.MainPage";
-            _typeNameTable[21] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[22] = "Microsoft.UI.Xaml.DependencyObject";
-            _typeNameTable[23] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[6] = "OpenLibrary.ViewModels.DetailsViewModel";
+            _typeNameTable[7] = "CommunityToolkit.Mvvm.ComponentModel.ObservableObject";
+            _typeNameTable[8] = "OpenLibrary.Models.Book";
+            _typeNameTable[9] = "OpenLibrary.Views.Details";
+            _typeNameTable[10] = "Microsoft.UI.Xaml.Controls.Page";
+            _typeNameTable[11] = "Microsoft.UI.Xaml.Controls.UserControl";
+            _typeNameTable[12] = "OpenLibrary.ViewModels.MainPageViewModel";
+            _typeNameTable[13] = "System.Windows.Input.ICommand";
+            _typeNameTable[14] = "System.Collections.Generic.List`1<OpenLibrary.Models.Book>";
+            _typeNameTable[15] = "String";
+            _typeNameTable[16] = "System.Collections.Generic.List`1<OpenLibrary.Models.Author>";
+            _typeNameTable[17] = "OpenLibrary.Models.Author";
+            _typeNameTable[18] = "Int32";
+            _typeNameTable[19] = "System.Collections.Generic.List`1<String>";
+            _typeNameTable[20] = "OpenLibrary.ViewModels.SearchParameters";
+            _typeNameTable[21] = "OpenLibrary.Views.MainPage";
+            _typeNameTable[22] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[23] = "Microsoft.UI.Xaml.DependencyObject";
+            _typeNameTable[24] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
 
-            _typeTable = new global::System.Type[24];
+            _typeTable = new global::System.Type[25];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
             _typeTable[3] = typeof(global::System.Boolean);
             _typeTable[4] = typeof(global::OpenLibrary.MainWindow);
             _typeTable[5] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[6] = typeof(global::OpenLibrary.Views.Details);
-            _typeTable[7] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
-            _typeTable[8] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
-            _typeTable[9] = typeof(global::OpenLibrary.ViewModels.MainPageViewModel);
-            _typeTable[10] = typeof(global::CommunityToolkit.Mvvm.ComponentModel.ObservableObject);
-            _typeTable[11] = typeof(global::System.Collections.Generic.List<global::OpenLibrary.Models.Book>);
-            _typeTable[12] = typeof(global::OpenLibrary.Models.Book);
-            _typeTable[13] = typeof(global::System.String);
-            _typeTable[14] = typeof(global::System.Collections.Generic.List<global::OpenLibrary.Models.Author>);
-            _typeTable[15] = typeof(global::OpenLibrary.Models.Author);
-            _typeTable[16] = typeof(global::System.Int32);
-            _typeTable[17] = typeof(global::System.Collections.Generic.List<global::System.String>);
-            _typeTable[18] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[19] = typeof(global::OpenLibrary.ViewModels.SearchParameters);
-            _typeTable[20] = typeof(global::OpenLibrary.Views.MainPage);
-            _typeTable[21] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[22] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
-            _typeTable[23] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[6] = typeof(global::OpenLibrary.ViewModels.DetailsViewModel);
+            _typeTable[7] = typeof(global::CommunityToolkit.Mvvm.ComponentModel.ObservableObject);
+            _typeTable[8] = typeof(global::OpenLibrary.Models.Book);
+            _typeTable[9] = typeof(global::OpenLibrary.Views.Details);
+            _typeTable[10] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
+            _typeTable[11] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
+            _typeTable[12] = typeof(global::OpenLibrary.ViewModels.MainPageViewModel);
+            _typeTable[13] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[14] = typeof(global::System.Collections.Generic.List<global::OpenLibrary.Models.Book>);
+            _typeTable[15] = typeof(global::System.String);
+            _typeTable[16] = typeof(global::System.Collections.Generic.List<global::OpenLibrary.Models.Author>);
+            _typeTable[17] = typeof(global::OpenLibrary.Models.Author);
+            _typeTable[18] = typeof(global::System.Int32);
+            _typeTable[19] = typeof(global::System.Collections.Generic.List<global::System.String>);
+            _typeTable[20] = typeof(global::OpenLibrary.ViewModels.SearchParameters);
+            _typeTable[21] = typeof(global::OpenLibrary.Views.MainPage);
+            _typeTable[22] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[23] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
+            _typeTable[24] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -311,16 +313,17 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
 
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
         private object Activate_4_MainWindow() { return new global::OpenLibrary.MainWindow(); }
-        private object Activate_6_Details() { return new global::OpenLibrary.Views.Details(); }
-        private object Activate_9_MainPageViewModel() { return new global::OpenLibrary.ViewModels.MainPageViewModel(); }
-        private object Activate_11_List() { return new global::System.Collections.Generic.List<global::OpenLibrary.Models.Book>(); }
-        private object Activate_12_Book() { return new global::OpenLibrary.Models.Book(); }
-        private object Activate_14_List() { return new global::System.Collections.Generic.List<global::OpenLibrary.Models.Author>(); }
-        private object Activate_15_Author() { return new global::OpenLibrary.Models.Author(); }
-        private object Activate_17_List() { return new global::System.Collections.Generic.List<global::System.String>(); }
-        private object Activate_19_SearchParameters() { return new global::OpenLibrary.ViewModels.SearchParameters(); }
-        private object Activate_20_MainPage() { return new global::OpenLibrary.Views.MainPage(); }
-        private object Activate_21_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_6_DetailsViewModel() { return new global::OpenLibrary.ViewModels.DetailsViewModel(); }
+        private object Activate_8_Book() { return new global::OpenLibrary.Models.Book(); }
+        private object Activate_9_Details() { return new global::OpenLibrary.Views.Details(); }
+        private object Activate_12_MainPageViewModel() { return new global::OpenLibrary.ViewModels.MainPageViewModel(); }
+        private object Activate_14_List() { return new global::System.Collections.Generic.List<global::OpenLibrary.Models.Book>(); }
+        private object Activate_16_List() { return new global::System.Collections.Generic.List<global::OpenLibrary.Models.Author>(); }
+        private object Activate_17_Author() { return new global::OpenLibrary.Models.Author(); }
+        private object Activate_19_List() { return new global::System.Collections.Generic.List<global::System.String>(); }
+        private object Activate_20_SearchParameters() { return new global::OpenLibrary.ViewModels.SearchParameters(); }
+        private object Activate_21_MainPage() { return new global::OpenLibrary.Views.MainPage(); }
+        private object Activate_22_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -328,25 +331,25 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_11_List(object instance, object item)
+        private void VectorAdd_14_List(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::OpenLibrary.Models.Book>)instance;
             var newItem = (global::OpenLibrary.Models.Book)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_14_List(object instance, object item)
+        private void VectorAdd_16_List(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::OpenLibrary.Models.Author>)instance;
             var newItem = (global::OpenLibrary.Models.Author)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_17_List(object instance, object item)
+        private void VectorAdd_19_List(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.String>)instance;
             var newItem = (global::System.String)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_23_IList(object instance, object item)
+        private void VectorAdd_24_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -394,46 +397,22 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
                 xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  OpenLibrary.Views.Details
-                userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_Details;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 7:   //  Microsoft.UI.Xaml.Controls.Page
-                xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 8:   //  Microsoft.UI.Xaml.Controls.UserControl
-                xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 9:   //  OpenLibrary.ViewModels.MainPageViewModel
+            case 6:   //  OpenLibrary.ViewModels.DetailsViewModel
                 userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableObject"));
-                userType.Activator = Activate_9_MainPageViewModel;
-                userType.AddMemberName("Books");
-                userType.AddMemberName("LoadCommand");
-                userType.AddMemberName("SearchCommand");
+                userType.Activator = Activate_6_DetailsViewModel;
+                userType.AddMemberName("Book");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  CommunityToolkit.Mvvm.ComponentModel.ObservableObject
+            case 7:   //  CommunityToolkit.Mvvm.ComponentModel.ObservableObject
                 userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 11:   //  System.Collections.Generic.List`1<OpenLibrary.Models.Book>
+            case 8:   //  OpenLibrary.Models.Book
                 userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_11_List;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 12:   //  OpenLibrary.Models.Book
-                userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_12_Book;
+                userType.Activator = Activate_8_Book;
                 userType.AddMemberName("Key");
                 userType.AddMemberName("Title");
                 userType.AddMemberName("Authors");
@@ -449,20 +428,58 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 13:   //  String
+            case 9:   //  OpenLibrary.Views.Details
+                userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_9_Details;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  Microsoft.UI.Xaml.Controls.Page
                 xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 14:   //  System.Collections.Generic.List`1<OpenLibrary.Models.Author>
+            case 11:   //  Microsoft.UI.Xaml.Controls.UserControl
+                xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 12:   //  OpenLibrary.ViewModels.MainPageViewModel
+                userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableObject"));
+                userType.Activator = Activate_12_MainPageViewModel;
+                userType.AddMemberName("LoadCommand");
+                userType.AddMemberName("SearchCommand");
+                userType.AddMemberName("Books");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  System.Windows.Input.ICommand
+                userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 14:   //  System.Collections.Generic.List`1<OpenLibrary.Models.Book>
                 userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.CollectionAdd = VectorAdd_14_List;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 15:   //  OpenLibrary.Models.Author
+            case 15:   //  String
+                xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 16:   //  System.Collections.Generic.List`1<OpenLibrary.Models.Author>
                 userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_15_Author;
+                userType.CollectionAdd = VectorAdd_16_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 17:   //  OpenLibrary.Models.Author
+                userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_17_Author;
                 userType.AddMemberName("Key");
                 userType.AddMemberName("Name");
                 userType.AddMemberName("Link");
@@ -471,26 +488,20 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 16:   //  Int32
+            case 18:   //  Int32
                 xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 17:   //  System.Collections.Generic.List`1<String>
+            case 19:   //  System.Collections.Generic.List`1<String>
                 userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_17_List;
+                userType.CollectionAdd = VectorAdd_19_List;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 18:   //  System.Windows.Input.ICommand
-                userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 19:   //  OpenLibrary.ViewModels.SearchParameters
+            case 20:   //  OpenLibrary.ViewModels.SearchParameters
                 userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_19_SearchParameters;
+                userType.Activator = Activate_20_SearchParameters;
                 userType.AddMemberName("SearchText");
                 userType.AddMemberName("SearchAuthor");
                 userType.AddMemberName("SearchLanguage");
@@ -498,16 +509,16 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 20:   //  OpenLibrary.Views.MainPage
+            case 21:   //  OpenLibrary.Views.MainPage
                 userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_20_MainPage;
+                userType.Activator = Activate_21_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 21:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 22:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_21_TreeViewNode;
+                userType.Activator = Activate_22_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -519,13 +530,13 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 22:   //  Microsoft.UI.Xaml.DependencyObject
+            case 23:   //  Microsoft.UI.Xaml.DependencyObject
                 xamlType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 23:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 24:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_23_IList;
+                userType.CollectionAdd = VectorAdd_24_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
@@ -598,242 +609,252 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.XamlControlsResources)instance;
             that.UseCompactResources = (global::System.Boolean)Value;
         }
-        private object get_1_MainPageViewModel_Books(object instance)
+        private object get_1_DetailsViewModel_Book(object instance)
         {
-            var that = (global::OpenLibrary.ViewModels.MainPageViewModel)instance;
-            return that.Books;
+            var that = (global::OpenLibrary.ViewModels.DetailsViewModel)instance;
+            return that.Book;
         }
-        private void set_1_MainPageViewModel_Books(object instance, object Value)
+        private void set_1_DetailsViewModel_Book(object instance, object Value)
         {
-            var that = (global::OpenLibrary.ViewModels.MainPageViewModel)instance;
-            that.Books = (global::System.Collections.Generic.List<global::OpenLibrary.Models.Book>)Value;
+            var that = (global::OpenLibrary.ViewModels.DetailsViewModel)instance;
+            that.Book = (global::OpenLibrary.Models.Book)Value;
         }
-        private object get_2_Book_Key(object instance)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            return that.Key;
-        }
-        private void set_2_Book_Key(object instance, object Value)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            that.Key = (global::System.String)Value;
-        }
-        private object get_3_Book_Title(object instance)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            return that.Title;
-        }
-        private void set_3_Book_Title(object instance, object Value)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            that.Title = (global::System.String)Value;
-        }
-        private object get_4_Book_Authors(object instance)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            return that.Authors;
-        }
-        private void set_4_Book_Authors(object instance, object Value)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            that.Authors = (global::System.Collections.Generic.List<global::OpenLibrary.Models.Author>)Value;
-        }
-        private object get_5_Author_Key(object instance)
-        {
-            var that = (global::OpenLibrary.Models.Author)instance;
-            return that.Key;
-        }
-        private void set_5_Author_Key(object instance, object Value)
-        {
-            var that = (global::OpenLibrary.Models.Author)instance;
-            that.Key = (global::System.String)Value;
-        }
-        private object get_6_Author_Name(object instance)
-        {
-            var that = (global::OpenLibrary.Models.Author)instance;
-            return that.Name;
-        }
-        private void set_6_Author_Name(object instance, object Value)
-        {
-            var that = (global::OpenLibrary.Models.Author)instance;
-            that.Name = (global::System.String)Value;
-        }
-        private object get_7_Author_Link(object instance)
-        {
-            var that = (global::OpenLibrary.Models.Author)instance;
-            return that.Link;
-        }
-        private void set_7_Author_Link(object instance, object Value)
-        {
-            var that = (global::OpenLibrary.Models.Author)instance;
-            that.Link = (global::System.String)Value;
-        }
-        private object get_8_Author_BirthDate(object instance)
-        {
-            var that = (global::OpenLibrary.Models.Author)instance;
-            return that.BirthDate;
-        }
-        private void set_8_Author_BirthDate(object instance, object Value)
-        {
-            var that = (global::OpenLibrary.Models.Author)instance;
-            that.BirthDate = (global::System.Int32)Value;
-        }
-        private object get_9_Book_AuthorNamesAsString(object instance)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            return that.AuthorNamesAsString;
-        }
-        private object get_10_Book_Description(object instance)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            return that.Description;
-        }
-        private void set_10_Book_Description(object instance, object Value)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            that.Description = (global::System.String)Value;
-        }
-        private object get_11_Book_FirstPublishYear(object instance)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            return that.FirstPublishYear;
-        }
-        private void set_11_Book_FirstPublishYear(object instance, object Value)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            that.FirstPublishYear = (global::System.Int32)Value;
-        }
-        private object get_12_Book_FirstPublishDate(object instance)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            return that.FirstPublishDate;
-        }
-        private void set_12_Book_FirstPublishDate(object instance, object Value)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            that.FirstPublishDate = (global::System.String)Value;
-        }
-        private object get_13_Book_Subjects(object instance)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            return that.Subjects;
-        }
-        private void set_13_Book_Subjects(object instance, object Value)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            that.Subjects = (global::System.Collections.Generic.List<global::System.String>)Value;
-        }
-        private object get_14_Book_SubjectsAsString(object instance)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            return that.SubjectsAsString;
-        }
-        private object get_15_Book_CoverId(object instance)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            return that.CoverId;
-        }
-        private void set_15_Book_CoverId(object instance, object Value)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            that.CoverId = (global::System.String)Value;
-        }
-        private object get_16_Book_CoverImageUrl(object instance)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            return that.CoverImageUrl;
-        }
-        private void set_16_Book_CoverImageUrl(object instance, object Value)
-        {
-            var that = (global::OpenLibrary.Models.Book)instance;
-            that.CoverImageUrl = (global::System.String)Value;
-        }
-        private object get_17_MainPageViewModel_LoadCommand(object instance)
+        private object get_2_MainPageViewModel_LoadCommand(object instance)
         {
             var that = (global::OpenLibrary.ViewModels.MainPageViewModel)instance;
             return that.LoadCommand;
         }
-        private object get_18_MainPageViewModel_SearchCommand(object instance)
+        private object get_3_MainPageViewModel_SearchCommand(object instance)
         {
             var that = (global::OpenLibrary.ViewModels.MainPageViewModel)instance;
             return that.SearchCommand;
         }
-        private object get_19_SearchParameters_SearchText(object instance)
+        private object get_4_MainPageViewModel_Books(object instance)
+        {
+            var that = (global::OpenLibrary.ViewModels.MainPageViewModel)instance;
+            return that.Books;
+        }
+        private void set_4_MainPageViewModel_Books(object instance, object Value)
+        {
+            var that = (global::OpenLibrary.ViewModels.MainPageViewModel)instance;
+            that.Books = (global::System.Collections.Generic.List<global::OpenLibrary.Models.Book>)Value;
+        }
+        private object get_5_Book_Key(object instance)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            return that.Key;
+        }
+        private void set_5_Book_Key(object instance, object Value)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            that.Key = (global::System.String)Value;
+        }
+        private object get_6_Book_Title(object instance)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            return that.Title;
+        }
+        private void set_6_Book_Title(object instance, object Value)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            that.Title = (global::System.String)Value;
+        }
+        private object get_7_Book_Authors(object instance)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            return that.Authors;
+        }
+        private void set_7_Book_Authors(object instance, object Value)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            that.Authors = (global::System.Collections.Generic.List<global::OpenLibrary.Models.Author>)Value;
+        }
+        private object get_8_Author_Key(object instance)
+        {
+            var that = (global::OpenLibrary.Models.Author)instance;
+            return that.Key;
+        }
+        private void set_8_Author_Key(object instance, object Value)
+        {
+            var that = (global::OpenLibrary.Models.Author)instance;
+            that.Key = (global::System.String)Value;
+        }
+        private object get_9_Author_Name(object instance)
+        {
+            var that = (global::OpenLibrary.Models.Author)instance;
+            return that.Name;
+        }
+        private void set_9_Author_Name(object instance, object Value)
+        {
+            var that = (global::OpenLibrary.Models.Author)instance;
+            that.Name = (global::System.String)Value;
+        }
+        private object get_10_Author_Link(object instance)
+        {
+            var that = (global::OpenLibrary.Models.Author)instance;
+            return that.Link;
+        }
+        private void set_10_Author_Link(object instance, object Value)
+        {
+            var that = (global::OpenLibrary.Models.Author)instance;
+            that.Link = (global::System.String)Value;
+        }
+        private object get_11_Author_BirthDate(object instance)
+        {
+            var that = (global::OpenLibrary.Models.Author)instance;
+            return that.BirthDate;
+        }
+        private void set_11_Author_BirthDate(object instance, object Value)
+        {
+            var that = (global::OpenLibrary.Models.Author)instance;
+            that.BirthDate = (global::System.Int32)Value;
+        }
+        private object get_12_Book_AuthorNamesAsString(object instance)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            return that.AuthorNamesAsString;
+        }
+        private object get_13_Book_Description(object instance)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            return that.Description;
+        }
+        private void set_13_Book_Description(object instance, object Value)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            that.Description = (global::System.String)Value;
+        }
+        private object get_14_Book_FirstPublishYear(object instance)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            return that.FirstPublishYear;
+        }
+        private void set_14_Book_FirstPublishYear(object instance, object Value)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            that.FirstPublishYear = (global::System.Int32)Value;
+        }
+        private object get_15_Book_FirstPublishDate(object instance)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            return that.FirstPublishDate;
+        }
+        private void set_15_Book_FirstPublishDate(object instance, object Value)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            that.FirstPublishDate = (global::System.String)Value;
+        }
+        private object get_16_Book_Subjects(object instance)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            return that.Subjects;
+        }
+        private void set_16_Book_Subjects(object instance, object Value)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            that.Subjects = (global::System.Collections.Generic.List<global::System.String>)Value;
+        }
+        private object get_17_Book_SubjectsAsString(object instance)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            return that.SubjectsAsString;
+        }
+        private object get_18_Book_CoverId(object instance)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            return that.CoverId;
+        }
+        private void set_18_Book_CoverId(object instance, object Value)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            that.CoverId = (global::System.String)Value;
+        }
+        private object get_19_Book_CoverImageUrl(object instance)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            return that.CoverImageUrl;
+        }
+        private void set_19_Book_CoverImageUrl(object instance, object Value)
+        {
+            var that = (global::OpenLibrary.Models.Book)instance;
+            that.CoverImageUrl = (global::System.String)Value;
+        }
+        private object get_20_SearchParameters_SearchText(object instance)
         {
             var that = (global::OpenLibrary.ViewModels.SearchParameters)instance;
             return that.SearchText;
         }
-        private void set_19_SearchParameters_SearchText(object instance, object Value)
+        private void set_20_SearchParameters_SearchText(object instance, object Value)
         {
             var that = (global::OpenLibrary.ViewModels.SearchParameters)instance;
             that.SearchText = (global::System.String)Value;
         }
-        private object get_20_SearchParameters_SearchAuthor(object instance)
+        private object get_21_SearchParameters_SearchAuthor(object instance)
         {
             var that = (global::OpenLibrary.ViewModels.SearchParameters)instance;
             return that.SearchAuthor;
         }
-        private void set_20_SearchParameters_SearchAuthor(object instance, object Value)
+        private void set_21_SearchParameters_SearchAuthor(object instance, object Value)
         {
             var that = (global::OpenLibrary.ViewModels.SearchParameters)instance;
             that.SearchAuthor = (global::System.String)Value;
         }
-        private object get_21_SearchParameters_SearchLanguage(object instance)
+        private object get_22_SearchParameters_SearchLanguage(object instance)
         {
             var that = (global::OpenLibrary.ViewModels.SearchParameters)instance;
             return that.SearchLanguage;
         }
-        private void set_21_SearchParameters_SearchLanguage(object instance, object Value)
+        private void set_22_SearchParameters_SearchLanguage(object instance, object Value)
         {
             var that = (global::OpenLibrary.ViewModels.SearchParameters)instance;
             that.SearchLanguage = (global::System.String)Value;
         }
-        private object get_22_TreeViewNode_Children(object instance)
+        private object get_23_TreeViewNode_Children(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Children;
         }
-        private object get_23_TreeViewNode_Content(object instance)
+        private object get_24_TreeViewNode_Content(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Content;
         }
-        private void set_23_TreeViewNode_Content(object instance, object Value)
+        private void set_24_TreeViewNode_Content(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.Content = (global::System.Object)Value;
         }
-        private object get_24_TreeViewNode_Depth(object instance)
+        private object get_25_TreeViewNode_Depth(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Depth;
         }
-        private object get_25_TreeViewNode_HasChildren(object instance)
+        private object get_26_TreeViewNode_HasChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasChildren;
         }
-        private object get_26_TreeViewNode_HasUnrealizedChildren(object instance)
+        private object get_27_TreeViewNode_HasUnrealizedChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasUnrealizedChildren;
         }
-        private void set_26_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
+        private void set_27_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.HasUnrealizedChildren = (global::System.Boolean)Value;
         }
-        private object get_27_TreeViewNode_IsExpanded(object instance)
+        private object get_28_TreeViewNode_IsExpanded(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.IsExpanded;
         }
-        private void set_27_TreeViewNode_IsExpanded(object instance, object Value)
+        private void set_28_TreeViewNode_IsExpanded(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.IsExpanded = (global::System.Boolean)Value;
         }
-        private object get_28_TreeViewNode_Parent(object instance)
+        private object get_29_TreeViewNode_Parent(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Parent;
@@ -853,176 +874,182 @@ namespace OpenLibrary.OpenLibrary_XamlTypeInfo
                 xamlMember.Getter = get_0_XamlControlsResources_UseCompactResources;
                 xamlMember.Setter = set_0_XamlControlsResources_UseCompactResources;
                 break;
-            case "OpenLibrary.ViewModels.MainPageViewModel.Books":
-                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.ViewModels.MainPageViewModel");
-                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Books", "System.Collections.Generic.List`1<OpenLibrary.Models.Book>");
-                xamlMember.Getter = get_1_MainPageViewModel_Books;
-                xamlMember.Setter = set_1_MainPageViewModel_Books;
-                break;
-            case "OpenLibrary.Models.Book.Key":
-                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
-                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Key", "String");
-                xamlMember.Getter = get_2_Book_Key;
-                xamlMember.Setter = set_2_Book_Key;
-                break;
-            case "OpenLibrary.Models.Book.Title":
-                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
-                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Title", "String");
-                xamlMember.Getter = get_3_Book_Title;
-                xamlMember.Setter = set_3_Book_Title;
-                break;
-            case "OpenLibrary.Models.Book.Authors":
-                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
-                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Authors", "System.Collections.Generic.List`1<OpenLibrary.Models.Author>");
-                xamlMember.Getter = get_4_Book_Authors;
-                xamlMember.Setter = set_4_Book_Authors;
-                break;
-            case "OpenLibrary.Models.Author.Key":
-                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Author");
-                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Key", "String");
-                xamlMember.Getter = get_5_Author_Key;
-                xamlMember.Setter = set_5_Author_Key;
-                break;
-            case "OpenLibrary.Models.Author.Name":
-                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Author");
-                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Name", "String");
-                xamlMember.Getter = get_6_Author_Name;
-                xamlMember.Setter = set_6_Author_Name;
-                break;
-            case "OpenLibrary.Models.Author.Link":
-                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Author");
-                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Link", "String");
-                xamlMember.Getter = get_7_Author_Link;
-                xamlMember.Setter = set_7_Author_Link;
-                break;
-            case "OpenLibrary.Models.Author.BirthDate":
-                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Author");
-                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "BirthDate", "Int32");
-                xamlMember.Getter = get_8_Author_BirthDate;
-                xamlMember.Setter = set_8_Author_BirthDate;
-                break;
-            case "OpenLibrary.Models.Book.AuthorNamesAsString":
-                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
-                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "AuthorNamesAsString", "String");
-                xamlMember.Getter = get_9_Book_AuthorNamesAsString;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "OpenLibrary.Models.Book.Description":
-                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
-                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Description", "String");
-                xamlMember.Getter = get_10_Book_Description;
-                xamlMember.Setter = set_10_Book_Description;
-                break;
-            case "OpenLibrary.Models.Book.FirstPublishYear":
-                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
-                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "FirstPublishYear", "Int32");
-                xamlMember.Getter = get_11_Book_FirstPublishYear;
-                xamlMember.Setter = set_11_Book_FirstPublishYear;
-                break;
-            case "OpenLibrary.Models.Book.FirstPublishDate":
-                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
-                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "FirstPublishDate", "String");
-                xamlMember.Getter = get_12_Book_FirstPublishDate;
-                xamlMember.Setter = set_12_Book_FirstPublishDate;
-                break;
-            case "OpenLibrary.Models.Book.Subjects":
-                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
-                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Subjects", "System.Collections.Generic.List`1<String>");
-                xamlMember.Getter = get_13_Book_Subjects;
-                xamlMember.Setter = set_13_Book_Subjects;
-                break;
-            case "OpenLibrary.Models.Book.SubjectsAsString":
-                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
-                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "SubjectsAsString", "String");
-                xamlMember.Getter = get_14_Book_SubjectsAsString;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "OpenLibrary.Models.Book.CoverId":
-                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
-                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "CoverId", "String");
-                xamlMember.Getter = get_15_Book_CoverId;
-                xamlMember.Setter = set_15_Book_CoverId;
-                break;
-            case "OpenLibrary.Models.Book.CoverImageUrl":
-                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
-                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "CoverImageUrl", "String");
-                xamlMember.Getter = get_16_Book_CoverImageUrl;
-                xamlMember.Setter = set_16_Book_CoverImageUrl;
+            case "OpenLibrary.ViewModels.DetailsViewModel.Book":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.ViewModels.DetailsViewModel");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Book", "OpenLibrary.Models.Book");
+                xamlMember.Getter = get_1_DetailsViewModel_Book;
+                xamlMember.Setter = set_1_DetailsViewModel_Book;
                 break;
             case "OpenLibrary.ViewModels.MainPageViewModel.LoadCommand":
                 userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.ViewModels.MainPageViewModel");
                 xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "LoadCommand", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_17_MainPageViewModel_LoadCommand;
+                xamlMember.Getter = get_2_MainPageViewModel_LoadCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "OpenLibrary.ViewModels.MainPageViewModel.SearchCommand":
                 userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.ViewModels.MainPageViewModel");
                 xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "SearchCommand", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_18_MainPageViewModel_SearchCommand;
+                xamlMember.Getter = get_3_MainPageViewModel_SearchCommand;
                 xamlMember.SetIsReadOnly();
+                break;
+            case "OpenLibrary.ViewModels.MainPageViewModel.Books":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.ViewModels.MainPageViewModel");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Books", "System.Collections.Generic.List`1<OpenLibrary.Models.Book>");
+                xamlMember.Getter = get_4_MainPageViewModel_Books;
+                xamlMember.Setter = set_4_MainPageViewModel_Books;
+                break;
+            case "OpenLibrary.Models.Book.Key":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Key", "String");
+                xamlMember.Getter = get_5_Book_Key;
+                xamlMember.Setter = set_5_Book_Key;
+                break;
+            case "OpenLibrary.Models.Book.Title":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Title", "String");
+                xamlMember.Getter = get_6_Book_Title;
+                xamlMember.Setter = set_6_Book_Title;
+                break;
+            case "OpenLibrary.Models.Book.Authors":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Authors", "System.Collections.Generic.List`1<OpenLibrary.Models.Author>");
+                xamlMember.Getter = get_7_Book_Authors;
+                xamlMember.Setter = set_7_Book_Authors;
+                break;
+            case "OpenLibrary.Models.Author.Key":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Author");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Key", "String");
+                xamlMember.Getter = get_8_Author_Key;
+                xamlMember.Setter = set_8_Author_Key;
+                break;
+            case "OpenLibrary.Models.Author.Name":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Author");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Name", "String");
+                xamlMember.Getter = get_9_Author_Name;
+                xamlMember.Setter = set_9_Author_Name;
+                break;
+            case "OpenLibrary.Models.Author.Link":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Author");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Link", "String");
+                xamlMember.Getter = get_10_Author_Link;
+                xamlMember.Setter = set_10_Author_Link;
+                break;
+            case "OpenLibrary.Models.Author.BirthDate":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Author");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "BirthDate", "Int32");
+                xamlMember.Getter = get_11_Author_BirthDate;
+                xamlMember.Setter = set_11_Author_BirthDate;
+                break;
+            case "OpenLibrary.Models.Book.AuthorNamesAsString":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "AuthorNamesAsString", "String");
+                xamlMember.Getter = get_12_Book_AuthorNamesAsString;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "OpenLibrary.Models.Book.Description":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Description", "String");
+                xamlMember.Getter = get_13_Book_Description;
+                xamlMember.Setter = set_13_Book_Description;
+                break;
+            case "OpenLibrary.Models.Book.FirstPublishYear":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "FirstPublishYear", "Int32");
+                xamlMember.Getter = get_14_Book_FirstPublishYear;
+                xamlMember.Setter = set_14_Book_FirstPublishYear;
+                break;
+            case "OpenLibrary.Models.Book.FirstPublishDate":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "FirstPublishDate", "String");
+                xamlMember.Getter = get_15_Book_FirstPublishDate;
+                xamlMember.Setter = set_15_Book_FirstPublishDate;
+                break;
+            case "OpenLibrary.Models.Book.Subjects":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Subjects", "System.Collections.Generic.List`1<String>");
+                xamlMember.Getter = get_16_Book_Subjects;
+                xamlMember.Setter = set_16_Book_Subjects;
+                break;
+            case "OpenLibrary.Models.Book.SubjectsAsString":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "SubjectsAsString", "String");
+                xamlMember.Getter = get_17_Book_SubjectsAsString;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "OpenLibrary.Models.Book.CoverId":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "CoverId", "String");
+                xamlMember.Getter = get_18_Book_CoverId;
+                xamlMember.Setter = set_18_Book_CoverId;
+                break;
+            case "OpenLibrary.Models.Book.CoverImageUrl":
+                userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.Models.Book");
+                xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "CoverImageUrl", "String");
+                xamlMember.Getter = get_19_Book_CoverImageUrl;
+                xamlMember.Setter = set_19_Book_CoverImageUrl;
                 break;
             case "OpenLibrary.ViewModels.SearchParameters.SearchText":
                 userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.ViewModels.SearchParameters");
                 xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "SearchText", "String");
-                xamlMember.Getter = get_19_SearchParameters_SearchText;
-                xamlMember.Setter = set_19_SearchParameters_SearchText;
+                xamlMember.Getter = get_20_SearchParameters_SearchText;
+                xamlMember.Setter = set_20_SearchParameters_SearchText;
                 break;
             case "OpenLibrary.ViewModels.SearchParameters.SearchAuthor":
                 userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.ViewModels.SearchParameters");
                 xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "SearchAuthor", "String");
-                xamlMember.Getter = get_20_SearchParameters_SearchAuthor;
-                xamlMember.Setter = set_20_SearchParameters_SearchAuthor;
+                xamlMember.Getter = get_21_SearchParameters_SearchAuthor;
+                xamlMember.Setter = set_21_SearchParameters_SearchAuthor;
                 break;
             case "OpenLibrary.ViewModels.SearchParameters.SearchLanguage":
                 userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OpenLibrary.ViewModels.SearchParameters");
                 xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "SearchLanguage", "String");
-                xamlMember.Getter = get_21_SearchParameters_SearchLanguage;
-                xamlMember.Setter = set_21_SearchParameters_SearchLanguage;
+                xamlMember.Getter = get_22_SearchParameters_SearchLanguage;
+                xamlMember.Setter = set_22_SearchParameters_SearchLanguage;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Children":
                 userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Children", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>");
-                xamlMember.Getter = get_22_TreeViewNode_Children;
+                xamlMember.Getter = get_23_TreeViewNode_Children;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Content":
                 userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Content", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_23_TreeViewNode_Content;
-                xamlMember.Setter = set_23_TreeViewNode_Content;
+                xamlMember.Getter = get_24_TreeViewNode_Content;
+                xamlMember.Setter = set_24_TreeViewNode_Content;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Depth":
                 userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Depth", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_24_TreeViewNode_Depth;
+                xamlMember.Getter = get_25_TreeViewNode_Depth;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasChildren":
                 userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "HasChildren", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_25_TreeViewNode_HasChildren;
+                xamlMember.Getter = get_26_TreeViewNode_HasChildren;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasUnrealizedChildren":
                 userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "HasUnrealizedChildren", "Boolean");
-                xamlMember.Getter = get_26_TreeViewNode_HasUnrealizedChildren;
-                xamlMember.Setter = set_26_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Getter = get_27_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Setter = set_27_TreeViewNode_HasUnrealizedChildren;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.IsExpanded":
                 userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_27_TreeViewNode_IsExpanded;
-                xamlMember.Setter = set_27_TreeViewNode_IsExpanded;
+                xamlMember.Getter = get_28_TreeViewNode_IsExpanded;
+                xamlMember.Setter = set_28_TreeViewNode_IsExpanded;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Parent":
                 userType = (global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OpenLibrary.OpenLibrary_XamlTypeInfo.XamlMember(this, "Parent", "Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember.Getter = get_28_TreeViewNode_Parent;
+                xamlMember.Getter = get_29_TreeViewNode_Parent;
                 xamlMember.SetIsReadOnly();
                 break;
             }

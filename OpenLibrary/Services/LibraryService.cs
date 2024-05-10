@@ -1,22 +1,22 @@
-﻿using OpenLibrary.Models;
+﻿using Newtonsoft.Json.Linq;
+using OpenLibrary.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 using System.Net.Http;
-using Newtonsoft.Json.Linq;
+using System.Threading.Tasks;
 
 namespace OpenLibrary.Services
 {
-    class LibraryService
-    {
+	// Service class responsible for interacting with the Open Library API
+	class LibraryService
+	{
 		public LibraryService() { }
 
+		// Method to search for a book by its unique key asynchronously
 		public async Task<Book> SearchWorkAsyncByKey(string uri)
 		{
 			Book results;
+			// Construct the API URL using the provided URI
 			string apiUrl = $"https://openlibrary.org{uri}.json";
 
 			using (HttpClient client = new HttpClient())
@@ -25,34 +25,37 @@ namespace OpenLibrary.Services
 				{
 					HttpResponseMessage response = await client.GetAsync(apiUrl);
 
+					// Check if the HTTP request was successful
 					if (response.IsSuccessStatusCode)
 					{
 						dynamic jsonResponse = await response.Content.ReadAsAsync<dynamic>();
 
-						//Key
+						// Extract book details from the JSON response
 						string key = jsonResponse["key"]?.ToString();
-						//Title
 						string title = jsonResponse["title"]?.ToString();
-						//Cover
 						string coverId = jsonResponse["covers"]?[0].ToString();
 						string coverImageUrl = (coverId != null) ? $"https://covers.openlibrary.org/b/id/{coverId}-M.jpg" : null;
-						//Authors
 						JArray authorsArray = (JArray)jsonResponse["authors"];
 						List<string> authorKeys = new List<string>();
+
+						// Extract author keys from the JSON response
 						foreach (JObject authorObject in authorsArray)
 						{
 							string authorkey = (string)authorObject["author"]["key"];
 							authorKeys.Add(authorkey);
 						}
+
+						// Retrieve author details asynchronously
 						List<Author> authorNames = new List<Author>();
 						foreach (string authorkey in authorKeys)
 						{
 							Author author = new Author();
-							await author.SearchAuthorsAsyncByKey(authorkey);
+							author = await SearchAuthorsAsyncByKey(authorkey);
 							authorNames.Add(author);
 						}
-						//Description
+
 						string description = "";
+						// Extract description from the JSON response
 						if (jsonResponse["description"] != null)
 						{
 							JToken descriptionToken = jsonResponse["description"];
@@ -65,14 +68,16 @@ namespace OpenLibrary.Services
 								description = descriptionToken.ToString();
 							}
 						}
-						//PublishDate
+
 						string firstPublishDate = null;
+						// Extract first publish date from the JSON response
 						if (jsonResponse["first_publish_date"] != null)
 						{
 							firstPublishDate = jsonResponse["first_publish_date"];
 						}
-						//Subjects
+
 						List<string> subjects = new List<string>();
+						// Extract subjects from the JSON response
 						if (jsonResponse["subjects"] != null)
 						{
 							foreach (var subject in jsonResponse["subjects"])
@@ -80,7 +85,8 @@ namespace OpenLibrary.Services
 								subjects.Add(subject?.ToString());
 							}
 						}
-						//new Book
+
+						// Create a new Book object with the extracted details
 						results = (new Book
 						{
 							Key = key,
@@ -96,24 +102,25 @@ namespace OpenLibrary.Services
 					}
 					else
 					{
-						throw new Exception("A kérés nem sikerült. Hibaüzenet: " + response.StatusCode);
+						throw new Exception("The request failed. Status code: " + response.StatusCode);
 					}
 				}
 				catch (Exception ex)
 				{
-					throw new Exception("Hiba történt: " + ex.Message);
+					throw new Exception("An error occurred: " + ex.Message);
 				}
 			}
 
 			return results;
 		}
 
+		// Method to search for books based on a search query asynchronously
 		public async Task<List<Book>> SearchBooksAsync(string searchQuery)
 		{
 			List<Book> results = new List<Book>();
 
+			// Construct the API URL for book search
 			string apiUrl = $"https://openlibrary.org/search.json?limit=40&q={searchQuery}&fields=key,title,cover_i,author_name,editions,editions.key,editions.title,editions.ebook_access,editions.language,first_publish_year&.json";
-			System.Diagnostics.Debug.WriteLine(apiUrl);
 
 			using (HttpClient client = new HttpClient())
 			{
@@ -121,15 +128,18 @@ namespace OpenLibrary.Services
 				{
 					HttpResponseMessage response = await client.GetAsync(apiUrl);
 
+					// Check if the HTTP request was successful
 					if (response.IsSuccessStatusCode)
 					{
 						dynamic jsonResponse = await response.Content.ReadAsAsync<dynamic>();
 
+						// Extract book details from the JSON response
 						foreach (var doc in jsonResponse["docs"])
 						{
 							string key = doc["key"].ToString().Trim().Replace(" ", "");
 							string title = doc["title"]?.ToString();
 
+							// Extract language from the API URL
 							int langIndex = apiUrl.IndexOf("lang=");
 							string language = "";
 							if (langIndex != -1 && langIndex + 5 < apiUrl.Length)
@@ -161,6 +171,7 @@ namespace OpenLibrary.Services
 							string finalTitle = !string.IsNullOrEmpty(foreignTitle) ? foreignTitle : title;
 
 							List<Author> authors = new List<Author>();
+							// Extract author details from the JSON response
 							if (doc["author_name"] != null)
 							{
 								foreach (var authorName in doc["author_name"])
@@ -170,6 +181,7 @@ namespace OpenLibrary.Services
 							}
 
 							int firstPublishYear = 0;
+							// Extract first publish year from the JSON response
 							if (doc["first_publish_year"] != null)
 							{
 								firstPublishYear = (int)doc["first_publish_year"];
@@ -177,6 +189,7 @@ namespace OpenLibrary.Services
 							string coverId = doc["cover_i"]?.ToString();
 							string coverImageUrl = (coverId != null) ? $"https://covers.openlibrary.org/b/id/{coverId}-M.jpg" : null;
 
+							// Create a new Book object with the extracted details
 							results.Add(new Book
 							{
 								Key = key,
@@ -190,16 +203,55 @@ namespace OpenLibrary.Services
 					}
 					else
 					{
-						throw new Exception("A kérés nem sikerült. Hibaüzenet: " + response.StatusCode);
+						throw new Exception("The request failed. Status code: " + response.StatusCode);
 					}
 				}
 				catch (Exception ex)
 				{
-					throw new Exception("Hiba történt: " + ex.Message);
+					throw new Exception("An error occurred: " + ex.Message);
 				}
 			}
 
 			return results;
+		}
+
+		// Method to search for authors asynchronously by key
+		public async Task<Author> SearchAuthorsAsyncByKey(string uri)
+		{
+			Author author = new Author();
+			string apiUrl = $"https://openlibrary.org{uri}.json";
+
+			using (HttpClient client = new HttpClient())
+			{
+				try
+				{
+					HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+					if (response.IsSuccessStatusCode)
+					{
+						dynamic jsonResponse = await response.Content.ReadAsAsync<dynamic>();
+
+						// Retrieve author name from response
+						author.Name = jsonResponse["name"]?.ToString();
+						// Retrieve author link from response
+						dynamic links = jsonResponse["links"];
+						if (links != null && links.Count > 0)
+						{
+							author.Link = links[0]["url"]?.ToString();
+						}
+
+					}
+					else
+					{
+						throw new Exception("The request failed. Status code: " + response.StatusCode);
+					}
+				}
+				catch (Exception ex)
+				{
+					throw new Exception("An error occurred: " + ex.Message);
+				}
+			}
+			return author;
 		}
 	}
 }
